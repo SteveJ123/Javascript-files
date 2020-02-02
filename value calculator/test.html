@@ -1,0 +1,1735 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shop Calculator</title>
+<style type="text/css">
+body{
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #000000;
+}
+body {
+    background-color: #FFFFFF;
+}
+.highlight {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    color: #FF0004;
+}
+
+div{
+	padding:0px !important;
+}
+
+.selectdiano{
+    display:flex;
+    flex-direction:row;    
+}
+
+.selectdiano label{
+    padding-right: 100px;
+}
+
+.type-width{
+    width: 328px;
+}
+
+.type-container{
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+@media only screen and (max-width: 750px) {
+    .selectdiano{
+        flex-direction:column;        
+    }
+
+    .type{
+        display: flex;
+    width: 400px;
+        /* width:400px; */
+        /* width: 80%;; */
+    }
+
+    .type label{
+        padding-right: 50%;
+    }
+
+    .type-container{
+display: flex;
+flex-wrap: wrap;
+margin-top: 40px;
+}
+
+    .type-width{
+    width: 150px;
+}
+
+
+}
+</style>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<form action="placeorder.php" method="post">
+  <div>
+    <div class="d-flex p-4">
+      <div><strong>SELECT THE DINOS YOU ARE PURCHASING</strong><br>
+        * Note: You can only purchase dino's that are currently on Display at TTS. We do not spawn in Dino's at the shop. If you would like max level custom spawned dinos, please look at our donation drop rewards at <a href="https://www.woodlandsark.com/donate" target="_blank">https://www.woodlandsark.com/donate</a><br> 
+         </div>
+    </div>
+    <div class="d-flex justify-content-around pl-4 pr-4">	
+      <div class="selectdiano" ><label for="dino1">Select a Dino:</label>        <div >
+            <select name="dino1" class="select">
+                <option value="Allosaurus5" selected="selected">Allosaurus (LVL x5 BBS)</option>
+                <option value="Angler3">Angler (LVL x3 BBS)</option>
+                <option value="Ankylosaurus4">Ankylosaurus (LVL x4 BBS)</option>
+                <option value="Araneo3">Araneo (LVL x3 BBS)</option>
+                <option value="Archaeopteryx3">Archaeopteryx (LVL x3 BBS)</option>
+                <option value="Argentavis5">Argentavis (LVL x5 BBS)</option>
+                <option value="Arthropleura4">Arthropleura (LVL x4 BBS)</option>
+                <option value="Baryonyx5">Baryonyx (LVL x5 BBS)</option>
+                <option value="Basilisk5">Basilisk (LVL x5 BBS)</option>
+                <option value="Basilosaurus5">Basilosaurus (LVL x5 BBS)</option>
+                <option value="Beelzebufo4">Beelzebufo (LVL x4 BBS)</option>
+                <option value="Bulbdog5">Bulbdog (LVL x5 BBS)</option>
+                <option value="Chalk Elemental6">Chalk Elemental (LVL x6 BBS)</option>
+                <option value="Carbonemys3">Carbonemys (LVL x3 BBS)</option>
+                <option value="Carnotaurus5">Carnotaurus (LVL x5 BBS)</option>
+                <option value="Catroides3">Catroides (LVL x3 BBS)</option>
+                <option value="Chalcotherius3">Chalcotherius (LVL x3 BBS)</option>
+                <option value="Compy3">Compy (LVL x3 BBS)</option>
+                <option value="Daeodon3">Daeodon (LVL x3 BBS)</option>
+                <option value="Deinonychus6">Deinonychus (LVL x6 BBS)</option>
+                <option value="Dilophosaurus4">Dilophosaurus (LVL x4 BBS)</option>
+                <option value="Dimorphodon4">Dimorphodon (LVL x4 BBS)</option>
+                <option value="Diplocaulus4">Diplocaulus (LVL x4 BBS)</option>
+                <option value="Diplodocus3">Diplodocus (LVL x3 BBS)</option>
+                <option value="Dire Bear5">Dire Bear (LVL x5 BBS)</option>
+                <option value="Dire Polar Bear6">Dire Polar Bear (LVL x6 BBS)</option>
+                <option value="Dire World5">Dire World (LVL x5 BBS)</option>
+                <option value="Doedicurus3">Doedicurus (LVL x3 BBS)</option>
+                <option value="Duncleosaurus5">Duncleosaurus (LVL x5 BBS)</option>
+                <option value="Dung Beetle3">Dung Beetle (LVL x3 BBS)</option>
+                <option value="Electrophorus3">Electrophorus (LVL x3 BBS)</option>
+                <option value="Enforcer5">Enforcer (LVL x5 BBS)</option>
+                <option value="Equus4">Equus (LVL x4</option>
+                <option value="Featherlight5">Featherlight (LVL x5 BBS)</option>
+                <option value="Fire Wyvern6">Fire Wyvern (LVL x6 BBS)</option>
+                <option value="Gacha (ED &amp; BP)6">Gacha (ED &amp; BP) (LVL x6 BBS)</option>
+                <option value="Gacha (Non ED &amp; BP)5">Gacha (Non ED &amp; BP) (LVL x5 BBS)</option>
+                <option value="Gallimimus4">Gallimimus (LVL x4 BBS)</option>
+                <option value="Gasbag5">Gasbag (LVL x5 BBS)</option>
+                <option value="Giant Bee4">Giant Bee (LVL x4 BBS)</option>
+                <option value="Gigantopithecus5">Gigantopithecus (LVL x5 BBS)</option>
+                <option value="Gigantosaur6">Gigantosaur (LVL x6 BBS)</option>
+                <option value="Glow Tail5">Glow Tail (LVL x5 BBS)</option>
+                <option value="Griffin5">Griffin (LVL x5 BBS)</option>
+                <option value="Hesperornis3">Hesperornis (LVL x3 BBS)</option>
+                <option value="Hydenadon4">Hydenadon (LVL x4 BBS)</option>
+                <option value="Ice Elemental6">Ice Elemental (LVL x6 BBS)</option>
+                <option value="Ichthyornis3">Ichthyornis (LVL x3 BBS)</option>
+                <option value="Iguanodon3">Iguanodon (LVL x3 BBS)</option>
+                <option value="Jerboa5">Jerboa (LVL x5 BBS)</option>
+                <option value="Kairaku3">Kairaku (LVL x3 BBS)</option>
+                <option value="Kaprosuchus4">Kaprosuchus4 BBS)</option>
+                <option value="Karkinos6">Karkinos (LVL x6 BBS)</option>
+                <option value="Kentrosaurus4">Kentrosaurus (LVL x4 BBS)</option>
+                <option value="Lamprey5">Lamprey (LVL x5 BBS)</option>
+                <option value="Lightning Wyvern6">Lightning Wyvern (LVL x6 BBS)</option>
+                <option value="Liopleurodon4">Liopleurodon (LVL x4 BBS)</option>
+                <option value="Lymantria3">Lymantria (LVL x3 BBS)</option>
+                <option value="Mammoth5">Mammoth (LVL x5 BBS)</option>
+                <option value="Managarmr6">Managarmr (LVL x6 BBS)</option>
+                <option value="Manta3">Manta (LVL x3 BBS)</option>
+                <option value="Mantis6">Mantis (LVL x6 BBS)</option>
+                <option value="Megalania4">Megalania (LVL x4 BBS)</option>
+                <option value="Megalodon5">Megalodon (LVL x5 BBS)</option>
+                <option value="Megalosaurus3">Megalosaurus (LVL x3 BBS)</option>
+                <option value="Megatherium4">Megatherium (LVL x4 BBS)</option>
+                <option value="Mek5">Mek (LVL x5 BBS)</option>
+                <option value="Mesopithecus4">Mesopithecus (LVL x4 BBS)</option>
+                <option value="Micro Raptor3">Micro Raptor (LVL x3 BBS)</option>
+                <option value="Morellatops3">Morellatops (LVL x3 BBS)</option>
+                <option value="Moschops3">Moschops (LVL x3 BBS)</option>
+                <option value="Mossasaur6">Mossasaur (LVL x6 BBS)</option>
+                <option value="Onyc3">Onyc (LVL x3 BBS)</option>
+                <option value="Otter4">Otter (LVL x4 BBS)</option>
+                <option value="Oviraptor4">Oviraptor (LVL x4 BBS)</option>
+                <option value="Ovis4">Ovis (LVL x4 BBS)</option>
+                <option value="Pachy3">Pachy (LVL x3 BBS)</option>
+                <option value="Pachy Rhino3">Pachy Rhino (LVL x3 BBS)</option>
+                <option value="Paraceratherium4">Paraceratherium (LVL x4 BBS)</option>
+                <option value="Parasaur5">Parasaur (LVL x5 BBS)</option>
+                <option value="Pegomastax3">Pegomastax (LVL x3 BBS)</option>
+                <option value="Pelagornis3">Pelagornis (LVL x3 BBS)</option>
+                <option value="Phiomia3">Phiomia (LVL x3 BBS)</option>
+                <option value="Phoenix6">Phoenix (LVL x6 BBS)</option>
+                <option value="Plesiosaur5">Plesiosaur (LVL x5 BBS)</option>
+                <option value="Poison Wyvern6">Poison Wyvern (LVL x6 BBS)</option>
+                <option value="Procoptodon4">Procoptodon (LVL x4 BBS)</option>
+                <option value="Pteranodon5">Pteranodon (LVL x5 BBS)</option>
+                <option value="Pulmino (Scorpion)4">Pulmino (Scorpion) (LVL x4 BBS)</option>
+                <option value="Purlovia4">Purlovia (LVL x4 BBS)</option>
+                <option value="Raptor5">Raptor (LVL x5 BBS)</option>
+                <option value="Ravager5">Ravager (LVL x5 BBS)</option>
+                <option value="Reaper6">Reaper (LVL x6 BBS)</option>
+                <option value="Rex5">Rex (LVL x5 BBS)</option>
+                <option value="Rock Drake6">Rock Drake (LVL x6 BBS)</option>
+                <option value="Rock Elemental6">Rock Elemental (LVL x6 BBS)</option>
+                <option value="Roll Rat4">Roll Rat (LVL x4 BBS)</option>
+                <option value="Sabre Tooth4">Sabre Tooth (LVL x4 BBS)</option>
+                <option value="Sarco4">Sarco (LVL x4 BBS)</option>
+                <option value="Shinehorn5">Shinehorn (LVL x5 BBS)</option>
+                <option value="Snow Owl6">Snow Owl (LVL x6 BBS)</option>
+                <option value="Spinosaurus5">Spinosaurus (LVL x5 BBS)</option>
+                <option value="Stegosaurus4">Stegosaurus (LVL x4 BBS)</option>
+                <option value="Tapejara4">Tapejara (LVL x4 BBS)</option>
+                <option value="Tek Parasaur6">Tek Parasaur (LVL x6 BBS)</option>
+                <option value="Tek Quetzal6">Tek Quetzal (LVL x6 BBS)</option>
+                <option value="Tek Raptor6">Tek Raptor (LVL x6 BBS)</option>
+                <option value="Tek Rex6">Tek Rex (LVL x6 BBS)</option>
+                <option value="Tek Stego5">Tek Stego (LVL x5 BBS)</option>
+                <option value="Terror Bird3">Terror Bird (LVL x3 BBS)</option>
+                <option value="Therizinosaur4">Therizinosaur (LVL x4 BBS)</option>
+                <option value="Thorny Dragon4">Thorny Dragon (LVL x4 BBS)</option>
+                <option value="Thylacoleo5">Thylacoleo (LVL x5 BBS)</option>
+                <option value="Titanoboa3">Titanoboa (LVL x3 BBS)</option>
+                <option value="Triceratops3">Triceratops (LVL x3 BBS)</option>
+                <option value="Trilobite3">Trilobite (LVL x3 BBS)</option>
+                <option value="Troodon3">Troodon (LVL x3 BBS)</option>
+                <option value="Tusoteuthis6">Tusoteuthis (LVL x6 BBS)</option>
+                <option value="Unicorn6">Unicorn (LVL x6 BBS)</option>
+                <option value="Velonosaur5">Velonosaur (LVL x5 BBS)</option>
+                <option value="Vulture3">Vulture (LVL x3 BBS)</option>
+                <option value="Whooly Rhino3">Whooly Rhino (LVL x3 BBS)</option>
+                <option value="Yutyrannus5">Yutyrannus (LVL x5 BBS)</option>
+          </select>
+          </div>
+    </div>    
+	  
+      <div class="selectdiano"><label for="level1">Level:</label>
+        <div><input name="level1" type="number" class="level" size="8"></div>
+    </div>
+      
+    </div>
+   
+
+      <div class="d-flex justify-content-around pl-4 pr-4">	
+        <div class="selectdiano" ><label for="dino2">Select a Dino:</label>        <div >
+              <select name="dino2" class="select"">
+                  <option value="Allosaurus5" selected="selected">Allosaurus (LVL x5 BBS)</option>
+                  <option value="Angler3">Angler (LVL x3 BBS)</option>
+                  <option value="Ankylosaurus4">Ankylosaurus (LVL x4 BBS)</option>
+                  <option value="Araneo3">Araneo (LVL x3 BBS)</option>
+                  <option value="Archaeopteryx3">Archaeopteryx (LVL x3 BBS)</option>
+                  <option value="Argentavis5">Argentavis (LVL x5 BBS)</option>
+                  <option value="Arthropleura4">Arthropleura (LVL x4 BBS)</option>
+                  <option value="Baryonyx5">Baryonyx (LVL x5 BBS)</option>
+                  <option value="Basilisk5">Basilisk (LVL x5 BBS)</option>
+                  <option value="Basilosaurus5">Basilosaurus (LVL x5 BBS)</option>
+                  <option value="Beelzebufo4">Beelzebufo (LVL x4 BBS)</option>
+                  <option value="Bulbdog5">Bulbdog (LVL x5 BBS)</option>
+                  <option value="Chalk Elemental6">Chalk Elemental (LVL x6 BBS)</option>
+                  <option value="Carbonemys3">Carbonemys (LVL x3 BBS)</option>
+                  <option value="Carnotaurus5">Carnotaurus (LVL x5 BBS)</option>
+                  <option value="Catroides3">Catroides (LVL x3 BBS)</option>
+                  <option value="Chalcotherius3">Chalcotherius (LVL x3 BBS)</option>
+                  <option value="Compy3">Compy (LVL x3 BBS)</option>
+                  <option value="Daeodon3">Daeodon (LVL x3 BBS)</option>
+                  <option value="Deinonychus6">Deinonychus (LVL x6 BBS)</option>
+                  <option value="Dilophosaurus4">Dilophosaurus (LVL x4 BBS)</option>
+                  <option value="Dimorphodon4">Dimorphodon (LVL x4 BBS)</option>
+                  <option value="Diplocaulus4">Diplocaulus (LVL x4 BBS)</option>
+                  <option value="Diplodocus3">Diplodocus (LVL x3 BBS)</option>
+                  <option value="Dire Bear5">Dire Bear (LVL x5 BBS)</option>
+                  <option value="Dire Polar Bear6">Dire Polar Bear (LVL x6 BBS)</option>
+                  <option value="Dire World5">Dire World (LVL x5 BBS)</option>
+                  <option value="Doedicurus3">Doedicurus (LVL x3 BBS)</option>
+                  <option value="Duncleosaurus5">Duncleosaurus (LVL x5 BBS)</option>
+                  <option value="Dung Beetle3">Dung Beetle (LVL x3 BBS)</option>
+                  <option value="Electrophorus3">Electrophorus (LVL x3 BBS)</option>
+                  <option value="Enforcer5">Enforcer (LVL x5 BBS)</option>
+                  <option value="Equus4">Equus (LVL x4</option>
+                  <option value="Featherlight5">Featherlight (LVL x5 BBS)</option>
+                  <option value="Fire Wyvern6">Fire Wyvern (LVL x6 BBS)</option>
+                  <option value="Gacha (ED &amp; BP)6">Gacha (ED &amp; BP) (LVL x6 BBS)</option>
+                  <option value="Gacha (Non ED &amp; BP)5">Gacha (Non ED &amp; BP) (LVL x5 BBS)</option>
+                  <option value="Gallimimus4">Gallimimus (LVL x4 BBS)</option>
+                  <option value="Gasbag5">Gasbag (LVL x5 BBS)</option>
+                  <option value="Giant Bee4">Giant Bee (LVL x4 BBS)</option>
+                  <option value="Gigantopithecus5">Gigantopithecus (LVL x5 BBS)</option>
+                  <option value="Gigantosaur6">Gigantosaur (LVL x6 BBS)</option>
+                  <option value="Glow Tail5">Glow Tail (LVL x5 BBS)</option>
+                  <option value="Griffin5">Griffin (LVL x5 BBS)</option>
+                  <option value="Hesperornis3">Hesperornis (LVL x3 BBS)</option>
+                  <option value="Hydenadon4">Hydenadon (LVL x4 BBS)</option>
+                  <option value="Ice Elemental6">Ice Elemental (LVL x6 BBS)</option>
+                  <option value="Ichthyornis3">Ichthyornis (LVL x3 BBS)</option>
+                  <option value="Iguanodon3">Iguanodon (LVL x3 BBS)</option>
+                  <option value="Jerboa5">Jerboa (LVL x5 BBS)</option>
+                  <option value="Kairaku3">Kairaku (LVL x3 BBS)</option>
+                  <option value="Kaprosuchus4">Kaprosuchus4 BBS)</option>
+                  <option value="Karkinos6">Karkinos (LVL x6 BBS)</option>
+                  <option value="Kentrosaurus4">Kentrosaurus (LVL x4 BBS)</option>
+                  <option value="Lamprey5">Lamprey (LVL x5 BBS)</option>
+                  <option value="Lightning Wyvern6">Lightning Wyvern (LVL x6 BBS)</option>
+                  <option value="Liopleurodon4">Liopleurodon (LVL x4 BBS)</option>
+                  <option value="Lymantria3">Lymantria (LVL x3 BBS)</option>
+                  <option value="Mammoth5">Mammoth (LVL x5 BBS)</option>
+                  <option value="Managarmr6">Managarmr (LVL x6 BBS)</option>
+                  <option value="Manta3">Manta (LVL x3 BBS)</option>
+                  <option value="Mantis6">Mantis (LVL x6 BBS)</option>
+                  <option value="Megalania4">Megalania (LVL x4 BBS)</option>
+                  <option value="Megalodon5">Megalodon (LVL x5 BBS)</option>
+                  <option value="Megalosaurus3">Megalosaurus (LVL x3 BBS)</option>
+                  <option value="Megatherium4">Megatherium (LVL x4 BBS)</option>
+                  <option value="Mek5">Mek (LVL x5 BBS)</option>
+                  <option value="Mesopithecus4">Mesopithecus (LVL x4 BBS)</option>
+                  <option value="Micro Raptor3">Micro Raptor (LVL x3 BBS)</option>
+                  <option value="Morellatops3">Morellatops (LVL x3 BBS)</option>
+                  <option value="Moschops3">Moschops (LVL x3 BBS)</option>
+                  <option value="Mossasaur6">Mossasaur (LVL x6 BBS)</option>
+                  <option value="Onyc3">Onyc (LVL x3 BBS)</option>
+                  <option value="Otter4">Otter (LVL x4 BBS)</option>
+                  <option value="Oviraptor4">Oviraptor (LVL x4 BBS)</option>
+                  <option value="Ovis4">Ovis (LVL x4 BBS)</option>
+                  <option value="Pachy3">Pachy (LVL x3 BBS)</option>
+                  <option value="Pachy Rhino3">Pachy Rhino (LVL x3 BBS)</option>
+                  <option value="Paraceratherium4">Paraceratherium (LVL x4 BBS)</option>
+                  <option value="Parasaur5">Parasaur (LVL x5 BBS)</option>
+                  <option value="Pegomastax3">Pegomastax (LVL x3 BBS)</option>
+                  <option value="Pelagornis3">Pelagornis (LVL x3 BBS)</option>
+                  <option value="Phiomia3">Phiomia (LVL x3 BBS)</option>
+                  <option value="Phoenix6">Phoenix (LVL x6 BBS)</option>
+                  <option value="Plesiosaur5">Plesiosaur (LVL x5 BBS)</option>
+                  <option value="Poison Wyvern6">Poison Wyvern (LVL x6 BBS)</option>
+                  <option value="Procoptodon4">Procoptodon (LVL x4 BBS)</option>
+                  <option value="Pteranodon5">Pteranodon (LVL x5 BBS)</option>
+                  <option value="Pulmino (Scorpion)4">Pulmino (Scorpion) (LVL x4 BBS)</option>
+                  <option value="Purlovia4">Purlovia (LVL x4 BBS)</option>
+                  <option value="Raptor5">Raptor (LVL x5 BBS)</option>
+                  <option value="Ravager5">Ravager (LVL x5 BBS)</option>
+                  <option value="Reaper6">Reaper (LVL x6 BBS)</option>
+                  <option value="Rex5">Rex (LVL x5 BBS)</option>
+                  <option value="Rock Drake6">Rock Drake (LVL x6 BBS)</option>
+                  <option value="Rock Elemental6">Rock Elemental (LVL x6 BBS)</option>
+                  <option value="Roll Rat4">Roll Rat (LVL x4 BBS)</option>
+                  <option value="Sabre Tooth4">Sabre Tooth (LVL x4 BBS)</option>
+                  <option value="Sarco4">Sarco (LVL x4 BBS)</option>
+                  <option value="Shinehorn5">Shinehorn (LVL x5 BBS)</option>
+                  <option value="Snow Owl6">Snow Owl (LVL x6 BBS)</option>
+                  <option value="Spinosaurus5">Spinosaurus (LVL x5 BBS)</option>
+                  <option value="Stegosaurus4">Stegosaurus (LVL x4 BBS)</option>
+                  <option value="Tapejara4">Tapejara (LVL x4 BBS)</option>
+                  <option value="Tek Parasaur6">Tek Parasaur (LVL x6 BBS)</option>
+                  <option value="Tek Quetzal6">Tek Quetzal (LVL x6 BBS)</option>
+                  <option value="Tek Raptor6">Tek Raptor (LVL x6 BBS)</option>
+                  <option value="Tek Rex6">Tek Rex (LVL x6 BBS)</option>
+                  <option value="Tek Stego5">Tek Stego (LVL x5 BBS)</option>
+                  <option value="Terror Bird3">Terror Bird (LVL x3 BBS)</option>
+                  <option value="Therizinosaur4">Therizinosaur (LVL x4 BBS)</option>
+                  <option value="Thorny Dragon4">Thorny Dragon (LVL x4 BBS)</option>
+                  <option value="Thylacoleo5">Thylacoleo (LVL x5 BBS)</option>
+                  <option value="Titanoboa3">Titanoboa (LVL x3 BBS)</option>
+                  <option value="Triceratops3">Triceratops (LVL x3 BBS)</option>
+                  <option value="Trilobite3">Trilobite (LVL x3 BBS)</option>
+                  <option value="Troodon3">Troodon (LVL x3 BBS)</option>
+                  <option value="Tusoteuthis6">Tusoteuthis (LVL x6 BBS)</option>
+                  <option value="Unicorn6">Unicorn (LVL x6 BBS)</option>
+                  <option value="Velonosaur5">Velonosaur (LVL x5 BBS)</option>
+                  <option value="Vulture3">Vulture (LVL x3 BBS)</option>
+                  <option value="Whooly Rhino3">Whooly Rhino (LVL x3 BBS)</option>
+                  <option value="Yutyrannus5">Yutyrannus (LVL x5 BBS)</option>
+            </select>
+            </div>
+      </div>    
+        
+        <div class="selectdiano"><label for="level1">Level:</label>
+          <div><input name="level2" type="number" class="level" size="8"></div>
+      </div>
+        
+      </div>
+
+      <div class="d-flex justify-content-around pl-4 pr-4">	
+        <div class="selectdiano" ><label for="dino3">Select a Dino:</label>        <div >
+              <select name="dino3" class="select"">
+                  <option value="Allosaurus5" selected="selected">Allosaurus (LVL x5 BBS)</option>
+                  <option value="Angler3">Angler (LVL x3 BBS)</option>
+                  <option value="Ankylosaurus4">Ankylosaurus (LVL x4 BBS)</option>
+                  <option value="Araneo3">Araneo (LVL x3 BBS)</option>
+                  <option value="Archaeopteryx3">Archaeopteryx (LVL x3 BBS)</option>
+                  <option value="Argentavis5">Argentavis (LVL x5 BBS)</option>
+                  <option value="Arthropleura4">Arthropleura (LVL x4 BBS)</option>
+                  <option value="Baryonyx5">Baryonyx (LVL x5 BBS)</option>
+                  <option value="Basilisk5">Basilisk (LVL x5 BBS)</option>
+                  <option value="Basilosaurus5">Basilosaurus (LVL x5 BBS)</option>
+                  <option value="Beelzebufo4">Beelzebufo (LVL x4 BBS)</option>
+                  <option value="Bulbdog5">Bulbdog (LVL x5 BBS)</option>
+                  <option value="Chalk Elemental6">Chalk Elemental (LVL x6 BBS)</option>
+                  <option value="Carbonemys3">Carbonemys (LVL x3 BBS)</option>
+                  <option value="Carnotaurus5">Carnotaurus (LVL x5 BBS)</option>
+                  <option value="Catroides3">Catroides (LVL x3 BBS)</option>
+                  <option value="Chalcotherius3">Chalcotherius (LVL x3 BBS)</option>
+                  <option value="Compy3">Compy (LVL x3 BBS)</option>
+                  <option value="Daeodon3">Daeodon (LVL x3 BBS)</option>
+                  <option value="Deinonychus6">Deinonychus (LVL x6 BBS)</option>
+                  <option value="Dilophosaurus4">Dilophosaurus (LVL x4 BBS)</option>
+                  <option value="Dimorphodon4">Dimorphodon (LVL x4 BBS)</option>
+                  <option value="Diplocaulus4">Diplocaulus (LVL x4 BBS)</option>
+                  <option value="Diplodocus3">Diplodocus (LVL x3 BBS)</option>
+                  <option value="Dire Bear5">Dire Bear (LVL x5 BBS)</option>
+                  <option value="Dire Polar Bear6">Dire Polar Bear (LVL x6 BBS)</option>
+                  <option value="Dire World5">Dire World (LVL x5 BBS)</option>
+                  <option value="Doedicurus3">Doedicurus (LVL x3 BBS)</option>
+                  <option value="Duncleosaurus5">Duncleosaurus (LVL x5 BBS)</option>
+                  <option value="Dung Beetle3">Dung Beetle (LVL x3 BBS)</option>
+                  <option value="Electrophorus3">Electrophorus (LVL x3 BBS)</option>
+                  <option value="Enforcer5">Enforcer (LVL x5 BBS)</option>
+                  <option value="Equus4">Equus (LVL x4</option>
+                  <option value="Featherlight5">Featherlight (LVL x5 BBS)</option>
+                  <option value="Fire Wyvern6">Fire Wyvern (LVL x6 BBS)</option>
+                  <option value="Gacha (ED &amp; BP)6">Gacha (ED &amp; BP) (LVL x6 BBS)</option>
+                  <option value="Gacha (Non ED &amp; BP)5">Gacha (Non ED &amp; BP) (LVL x5 BBS)</option>
+                  <option value="Gallimimus4">Gallimimus (LVL x4 BBS)</option>
+                  <option value="Gasbag5">Gasbag (LVL x5 BBS)</option>
+                  <option value="Giant Bee4">Giant Bee (LVL x4 BBS)</option>
+                  <option value="Gigantopithecus5">Gigantopithecus (LVL x5 BBS)</option>
+                  <option value="Gigantosaur6">Gigantosaur (LVL x6 BBS)</option>
+                  <option value="Glow Tail5">Glow Tail (LVL x5 BBS)</option>
+                  <option value="Griffin5">Griffin (LVL x5 BBS)</option>
+                  <option value="Hesperornis3">Hesperornis (LVL x3 BBS)</option>
+                  <option value="Hydenadon4">Hydenadon (LVL x4 BBS)</option>
+                  <option value="Ice Elemental6">Ice Elemental (LVL x6 BBS)</option>
+                  <option value="Ichthyornis3">Ichthyornis (LVL x3 BBS)</option>
+                  <option value="Iguanodon3">Iguanodon (LVL x3 BBS)</option>
+                  <option value="Jerboa5">Jerboa (LVL x5 BBS)</option>
+                  <option value="Kairaku3">Kairaku (LVL x3 BBS)</option>
+                  <option value="Kaprosuchus4">Kaprosuchus4 BBS)</option>
+                  <option value="Karkinos6">Karkinos (LVL x6 BBS)</option>
+                  <option value="Kentrosaurus4">Kentrosaurus (LVL x4 BBS)</option>
+                  <option value="Lamprey5">Lamprey (LVL x5 BBS)</option>
+                  <option value="Lightning Wyvern6">Lightning Wyvern (LVL x6 BBS)</option>
+                  <option value="Liopleurodon4">Liopleurodon (LVL x4 BBS)</option>
+                  <option value="Lymantria3">Lymantria (LVL x3 BBS)</option>
+                  <option value="Mammoth5">Mammoth (LVL x5 BBS)</option>
+                  <option value="Managarmr6">Managarmr (LVL x6 BBS)</option>
+                  <option value="Manta3">Manta (LVL x3 BBS)</option>
+                  <option value="Mantis6">Mantis (LVL x6 BBS)</option>
+                  <option value="Megalania4">Megalania (LVL x4 BBS)</option>
+                  <option value="Megalodon5">Megalodon (LVL x5 BBS)</option>
+                  <option value="Megalosaurus3">Megalosaurus (LVL x3 BBS)</option>
+                  <option value="Megatherium4">Megatherium (LVL x4 BBS)</option>
+                  <option value="Mek5">Mek (LVL x5 BBS)</option>
+                  <option value="Mesopithecus4">Mesopithecus (LVL x4 BBS)</option>
+                  <option value="Micro Raptor3">Micro Raptor (LVL x3 BBS)</option>
+                  <option value="Morellatops3">Morellatops (LVL x3 BBS)</option>
+                  <option value="Moschops3">Moschops (LVL x3 BBS)</option>
+                  <option value="Mossasaur6">Mossasaur (LVL x6 BBS)</option>
+                  <option value="Onyc3">Onyc (LVL x3 BBS)</option>
+                  <option value="Otter4">Otter (LVL x4 BBS)</option>
+                  <option value="Oviraptor4">Oviraptor (LVL x4 BBS)</option>
+                  <option value="Ovis4">Ovis (LVL x4 BBS)</option>
+                  <option value="Pachy3">Pachy (LVL x3 BBS)</option>
+                  <option value="Pachy Rhino3">Pachy Rhino (LVL x3 BBS)</option>
+                  <option value="Paraceratherium4">Paraceratherium (LVL x4 BBS)</option>
+                  <option value="Parasaur5">Parasaur (LVL x5 BBS)</option>
+                  <option value="Pegomastax3">Pegomastax (LVL x3 BBS)</option>
+                  <option value="Pelagornis3">Pelagornis (LVL x3 BBS)</option>
+                  <option value="Phiomia3">Phiomia (LVL x3 BBS)</option>
+                  <option value="Phoenix6">Phoenix (LVL x6 BBS)</option>
+                  <option value="Plesiosaur5">Plesiosaur (LVL x5 BBS)</option>
+                  <option value="Poison Wyvern6">Poison Wyvern (LVL x6 BBS)</option>
+                  <option value="Procoptodon4">Procoptodon (LVL x4 BBS)</option>
+                  <option value="Pteranodon5">Pteranodon (LVL x5 BBS)</option>
+                  <option value="Pulmino (Scorpion)4">Pulmino (Scorpion) (LVL x4 BBS)</option>
+                  <option value="Purlovia4">Purlovia (LVL x4 BBS)</option>
+                  <option value="Raptor5">Raptor (LVL x5 BBS)</option>
+                  <option value="Ravager5">Ravager (LVL x5 BBS)</option>
+                  <option value="Reaper6">Reaper (LVL x6 BBS)</option>
+                  <option value="Rex5">Rex (LVL x5 BBS)</option>
+                  <option value="Rock Drake6">Rock Drake (LVL x6 BBS)</option>
+                  <option value="Rock Elemental6">Rock Elemental (LVL x6 BBS)</option>
+                  <option value="Roll Rat4">Roll Rat (LVL x4 BBS)</option>
+                  <option value="Sabre Tooth4">Sabre Tooth (LVL x4 BBS)</option>
+                  <option value="Sarco4">Sarco (LVL x4 BBS)</option>
+                  <option value="Shinehorn5">Shinehorn (LVL x5 BBS)</option>
+                  <option value="Snow Owl6">Snow Owl (LVL x6 BBS)</option>
+                  <option value="Spinosaurus5">Spinosaurus (LVL x5 BBS)</option>
+                  <option value="Stegosaurus4">Stegosaurus (LVL x4 BBS)</option>
+                  <option value="Tapejara4">Tapejara (LVL x4 BBS)</option>
+                  <option value="Tek Parasaur6">Tek Parasaur (LVL x6 BBS)</option>
+                  <option value="Tek Quetzal6">Tek Quetzal (LVL x6 BBS)</option>
+                  <option value="Tek Raptor6">Tek Raptor (LVL x6 BBS)</option>
+                  <option value="Tek Rex6">Tek Rex (LVL x6 BBS)</option>
+                  <option value="Tek Stego5">Tek Stego (LVL x5 BBS)</option>
+                  <option value="Terror Bird3">Terror Bird (LVL x3 BBS)</option>
+                  <option value="Therizinosaur4">Therizinosaur (LVL x4 BBS)</option>
+                  <option value="Thorny Dragon4">Thorny Dragon (LVL x4 BBS)</option>
+                  <option value="Thylacoleo5">Thylacoleo (LVL x5 BBS)</option>
+                  <option value="Titanoboa3">Titanoboa (LVL x3 BBS)</option>
+                  <option value="Triceratops3">Triceratops (LVL x3 BBS)</option>
+                  <option value="Trilobite3">Trilobite (LVL x3 BBS)</option>
+                  <option value="Troodon3">Troodon (LVL x3 BBS)</option>
+                  <option value="Tusoteuthis6">Tusoteuthis (LVL x6 BBS)</option>
+                  <option value="Unicorn6">Unicorn (LVL x6 BBS)</option>
+                  <option value="Velonosaur5">Velonosaur (LVL x5 BBS)</option>
+                  <option value="Vulture3">Vulture (LVL x3 BBS)</option>
+                  <option value="Whooly Rhino3">Whooly Rhino (LVL x3 BBS)</option>
+                  <option value="Yutyrannus5">Yutyrannus (LVL x5 BBS)</option>
+            </select>
+            </div>
+      </div>    
+        
+        <div class="selectdiano"><label for="level1">Level:</label>
+          <div><input name="level3" type="number" class="level" size="8"></div>
+      </div>
+        
+      </div>
+
+      <div class="d-flex justify-content-around pl-4 pr-4">	
+        <div class="selectdiano" ><label for="dino4">Select a Dino:</label>        <div >
+              <select name="dino4" class="select">
+                  <option value="Allosaurus5" selected="selected">Allosaurus (LVL x5 BBS)</option>
+                  <option value="Angler3">Angler (LVL x3 BBS)</option>
+                  <option value="Ankylosaurus4">Ankylosaurus (LVL x4 BBS)</option>
+                  <option value="Araneo3">Araneo (LVL x3 BBS)</option>
+                  <option value="Archaeopteryx3">Archaeopteryx (LVL x3 BBS)</option>
+                  <option value="Argentavis5">Argentavis (LVL x5 BBS)</option>
+                  <option value="Arthropleura4">Arthropleura (LVL x4 BBS)</option>
+                  <option value="Baryonyx5">Baryonyx (LVL x5 BBS)</option>
+                  <option value="Basilisk5">Basilisk (LVL x5 BBS)</option>
+                  <option value="Basilosaurus5">Basilosaurus (LVL x5 BBS)</option>
+                  <option value="Beelzebufo4">Beelzebufo (LVL x4 BBS)</option>
+                  <option value="Bulbdog5">Bulbdog (LVL x5 BBS)</option>
+                  <option value="Chalk Elemental6">Chalk Elemental (LVL x6 BBS)</option>
+                  <option value="Carbonemys3">Carbonemys (LVL x3 BBS)</option>
+                  <option value="Carnotaurus5">Carnotaurus (LVL x5 BBS)</option>
+                  <option value="Catroides3">Catroides (LVL x3 BBS)</option>
+                  <option value="Chalcotherius3">Chalcotherius (LVL x3 BBS)</option>
+                  <option value="Compy3">Compy (LVL x3 BBS)</option>
+                  <option value="Daeodon3">Daeodon (LVL x3 BBS)</option>
+                  <option value="Deinonychus6">Deinonychus (LVL x6 BBS)</option>
+                  <option value="Dilophosaurus4">Dilophosaurus (LVL x4 BBS)</option>
+                  <option value="Dimorphodon4">Dimorphodon (LVL x4 BBS)</option>
+                  <option value="Diplocaulus4">Diplocaulus (LVL x4 BBS)</option>
+                  <option value="Diplodocus3">Diplodocus (LVL x3 BBS)</option>
+                  <option value="Dire Bear5">Dire Bear (LVL x5 BBS)</option>
+                  <option value="Dire Polar Bear6">Dire Polar Bear (LVL x6 BBS)</option>
+                  <option value="Dire World5">Dire World (LVL x5 BBS)</option>
+                  <option value="Doedicurus3">Doedicurus (LVL x3 BBS)</option>
+                  <option value="Duncleosaurus5">Duncleosaurus (LVL x5 BBS)</option>
+                  <option value="Dung Beetle3">Dung Beetle (LVL x3 BBS)</option>
+                  <option value="Electrophorus3">Electrophorus (LVL x3 BBS)</option>
+                  <option value="Enforcer5">Enforcer (LVL x5 BBS)</option>
+                  <option value="Equus4">Equus (LVL x4</option>
+                  <option value="Featherlight5">Featherlight (LVL x5 BBS)</option>
+                  <option value="Fire Wyvern6">Fire Wyvern (LVL x6 BBS)</option>
+                  <option value="Gacha (ED &amp; BP)6">Gacha (ED &amp; BP) (LVL x6 BBS)</option>
+                  <option value="Gacha (Non ED &amp; BP)5">Gacha (Non ED &amp; BP) (LVL x5 BBS)</option>
+                  <option value="Gallimimus4">Gallimimus (LVL x4 BBS)</option>
+                  <option value="Gasbag5">Gasbag (LVL x5 BBS)</option>
+                  <option value="Giant Bee4">Giant Bee (LVL x4 BBS)</option>
+                  <option value="Gigantopithecus5">Gigantopithecus (LVL x5 BBS)</option>
+                  <option value="Gigantosaur6">Gigantosaur (LVL x6 BBS)</option>
+                  <option value="Glow Tail5">Glow Tail (LVL x5 BBS)</option>
+                  <option value="Griffin5">Griffin (LVL x5 BBS)</option>
+                  <option value="Hesperornis3">Hesperornis (LVL x3 BBS)</option>
+                  <option value="Hydenadon4">Hydenadon (LVL x4 BBS)</option>
+                  <option value="Ice Elemental6">Ice Elemental (LVL x6 BBS)</option>
+                  <option value="Ichthyornis3">Ichthyornis (LVL x3 BBS)</option>
+                  <option value="Iguanodon3">Iguanodon (LVL x3 BBS)</option>
+                  <option value="Jerboa5">Jerboa (LVL x5 BBS)</option>
+                  <option value="Kairaku3">Kairaku (LVL x3 BBS)</option>
+                  <option value="Kaprosuchus4">Kaprosuchus4 BBS)</option>
+                  <option value="Karkinos6">Karkinos (LVL x6 BBS)</option>
+                  <option value="Kentrosaurus4">Kentrosaurus (LVL x4 BBS)</option>
+                  <option value="Lamprey5">Lamprey (LVL x5 BBS)</option>
+                  <option value="Lightning Wyvern6">Lightning Wyvern (LVL x6 BBS)</option>
+                  <option value="Liopleurodon4">Liopleurodon (LVL x4 BBS)</option>
+                  <option value="Lymantria3">Lymantria (LVL x3 BBS)</option>
+                  <option value="Mammoth5">Mammoth (LVL x5 BBS)</option>
+                  <option value="Managarmr6">Managarmr (LVL x6 BBS)</option>
+                  <option value="Manta3">Manta (LVL x3 BBS)</option>
+                  <option value="Mantis6">Mantis (LVL x6 BBS)</option>
+                  <option value="Megalania4">Megalania (LVL x4 BBS)</option>
+                  <option value="Megalodon5">Megalodon (LVL x5 BBS)</option>
+                  <option value="Megalosaurus3">Megalosaurus (LVL x3 BBS)</option>
+                  <option value="Megatherium4">Megatherium (LVL x4 BBS)</option>
+                  <option value="Mek5">Mek (LVL x5 BBS)</option>
+                  <option value="Mesopithecus4">Mesopithecus (LVL x4 BBS)</option>
+                  <option value="Micro Raptor3">Micro Raptor (LVL x3 BBS)</option>
+                  <option value="Morellatops3">Morellatops (LVL x3 BBS)</option>
+                  <option value="Moschops3">Moschops (LVL x3 BBS)</option>
+                  <option value="Mossasaur6">Mossasaur (LVL x6 BBS)</option>
+                  <option value="Onyc3">Onyc (LVL x3 BBS)</option>
+                  <option value="Otter4">Otter (LVL x4 BBS)</option>
+                  <option value="Oviraptor4">Oviraptor (LVL x4 BBS)</option>
+                  <option value="Ovis4">Ovis (LVL x4 BBS)</option>
+                  <option value="Pachy3">Pachy (LVL x3 BBS)</option>
+                  <option value="Pachy Rhino3">Pachy Rhino (LVL x3 BBS)</option>
+                  <option value="Paraceratherium4">Paraceratherium (LVL x4 BBS)</option>
+                  <option value="Parasaur5">Parasaur (LVL x5 BBS)</option>
+                  <option value="Pegomastax3">Pegomastax (LVL x3 BBS)</option>
+                  <option value="Pelagornis3">Pelagornis (LVL x3 BBS)</option>
+                  <option value="Phiomia3">Phiomia (LVL x3 BBS)</option>
+                  <option value="Phoenix6">Phoenix (LVL x6 BBS)</option>
+                  <option value="Plesiosaur5">Plesiosaur (LVL x5 BBS)</option>
+                  <option value="Poison Wyvern6">Poison Wyvern (LVL x6 BBS)</option>
+                  <option value="Procoptodon4">Procoptodon (LVL x4 BBS)</option>
+                  <option value="Pteranodon5">Pteranodon (LVL x5 BBS)</option>
+                  <option value="Pulmino (Scorpion)4">Pulmino (Scorpion) (LVL x4 BBS)</option>
+                  <option value="Purlovia4">Purlovia (LVL x4 BBS)</option>
+                  <option value="Raptor5">Raptor (LVL x5 BBS)</option>
+                  <option value="Ravager5">Ravager (LVL x5 BBS)</option>
+                  <option value="Reaper6">Reaper (LVL x6 BBS)</option>
+                  <option value="Rex5">Rex (LVL x5 BBS)</option>
+                  <option value="Rock Drake6">Rock Drake (LVL x6 BBS)</option>
+                  <option value="Rock Elemental6">Rock Elemental (LVL x6 BBS)</option>
+                  <option value="Roll Rat4">Roll Rat (LVL x4 BBS)</option>
+                  <option value="Sabre Tooth4">Sabre Tooth (LVL x4 BBS)</option>
+                  <option value="Sarco4">Sarco (LVL x4 BBS)</option>
+                  <option value="Shinehorn5">Shinehorn (LVL x5 BBS)</option>
+                  <option value="Snow Owl6">Snow Owl (LVL x6 BBS)</option>
+                  <option value="Spinosaurus5">Spinosaurus (LVL x5 BBS)</option>
+                  <option value="Stegosaurus4">Stegosaurus (LVL x4 BBS)</option>
+                  <option value="Tapejara4">Tapejara (LVL x4 BBS)</option>
+                  <option value="Tek Parasaur6">Tek Parasaur (LVL x6 BBS)</option>
+                  <option value="Tek Quetzal6">Tek Quetzal (LVL x6 BBS)</option>
+                  <option value="Tek Raptor6">Tek Raptor (LVL x6 BBS)</option>
+                  <option value="Tek Rex6">Tek Rex (LVL x6 BBS)</option>
+                  <option value="Tek Stego5">Tek Stego (LVL x5 BBS)</option>
+                  <option value="Terror Bird3">Terror Bird (LVL x3 BBS)</option>
+                  <option value="Therizinosaur4">Therizinosaur (LVL x4 BBS)</option>
+                  <option value="Thorny Dragon4">Thorny Dragon (LVL x4 BBS)</option>
+                  <option value="Thylacoleo5">Thylacoleo (LVL x5 BBS)</option>
+                  <option value="Titanoboa3">Titanoboa (LVL x3 BBS)</option>
+                  <option value="Triceratops3">Triceratops (LVL x3 BBS)</option>
+                  <option value="Trilobite3">Trilobite (LVL x3 BBS)</option>
+                  <option value="Troodon3">Troodon (LVL x3 BBS)</option>
+                  <option value="Tusoteuthis6">Tusoteuthis (LVL x6 BBS)</option>
+                  <option value="Unicorn6">Unicorn (LVL x6 BBS)</option>
+                  <option value="Velonosaur5">Velonosaur (LVL x5 BBS)</option>
+                  <option value="Vulture3">Vulture (LVL x3 BBS)</option>
+                  <option value="Whooly Rhino3">Whooly Rhino (LVL x3 BBS)</option>
+                  <option value="Yutyrannus5">Yutyrannus (LVL x5 BBS)</option>
+            </select>
+            </div>
+      </div>    
+        
+        <div class="selectdiano"><label for="level1">Level:</label>
+          <div><input name="level4" type="number" class="level" size="8"></div>
+      </div>
+        
+      </div>
+
+      <div class="d-flex justify-content-around pl-4 pr-4">	
+        <div class="selectdiano" ><label for="dino5">Select a Dino:</label>        <div >
+              <select name="dino5" class="select"">
+                  <option value="Allosaurus5" selected="selected">Allosaurus (LVL x5 BBS)</option>
+                  <option value="Angler3">Angler (LVL x3 BBS)</option>
+                  <option value="Ankylosaurus4">Ankylosaurus (LVL x4 BBS)</option>
+                  <option value="Araneo3">Araneo (LVL x3 BBS)</option>
+                  <option value="Archaeopteryx3">Archaeopteryx (LVL x3 BBS)</option>
+                  <option value="Argentavis5">Argentavis (LVL x5 BBS)</option>
+                  <option value="Arthropleura4">Arthropleura (LVL x4 BBS)</option>
+                  <option value="Baryonyx5">Baryonyx (LVL x5 BBS)</option>
+                  <option value="Basilisk5">Basilisk (LVL x5 BBS)</option>
+                  <option value="Basilosaurus5">Basilosaurus (LVL x5 BBS)</option>
+                  <option value="Beelzebufo4">Beelzebufo (LVL x4 BBS)</option>
+                  <option value="Bulbdog5">Bulbdog (LVL x5 BBS)</option>
+                  <option value="Chalk Elemental6">Chalk Elemental (LVL x6 BBS)</option>
+                  <option value="Carbonemys3">Carbonemys (LVL x3 BBS)</option>
+                  <option value="Carnotaurus5">Carnotaurus (LVL x5 BBS)</option>
+                  <option value="Catroides3">Catroides (LVL x3 BBS)</option>
+                  <option value="Chalcotherius3">Chalcotherius (LVL x3 BBS)</option>
+                  <option value="Compy3">Compy (LVL x3 BBS)</option>
+                  <option value="Daeodon3">Daeodon (LVL x3 BBS)</option>
+                  <option value="Deinonychus6">Deinonychus (LVL x6 BBS)</option>
+                  <option value="Dilophosaurus4">Dilophosaurus (LVL x4 BBS)</option>
+                  <option value="Dimorphodon4">Dimorphodon (LVL x4 BBS)</option>
+                  <option value="Diplocaulus4">Diplocaulus (LVL x4 BBS)</option>
+                  <option value="Diplodocus3">Diplodocus (LVL x3 BBS)</option>
+                  <option value="Dire Bear5">Dire Bear (LVL x5 BBS)</option>
+                  <option value="Dire Polar Bear6">Dire Polar Bear (LVL x6 BBS)</option>
+                  <option value="Dire World5">Dire World (LVL x5 BBS)</option>
+                  <option value="Doedicurus3">Doedicurus (LVL x3 BBS)</option>
+                  <option value="Duncleosaurus5">Duncleosaurus (LVL x5 BBS)</option>
+                  <option value="Dung Beetle3">Dung Beetle (LVL x3 BBS)</option>
+                  <option value="Electrophorus3">Electrophorus (LVL x3 BBS)</option>
+                  <option value="Enforcer5">Enforcer (LVL x5 BBS)</option>
+                  <option value="Equus4">Equus (LVL x4</option>
+                  <option value="Featherlight5">Featherlight (LVL x5 BBS)</option>
+                  <option value="Fire Wyvern6">Fire Wyvern (LVL x6 BBS)</option>
+                  <option value="Gacha (ED &amp; BP)6">Gacha (ED &amp; BP) (LVL x6 BBS)</option>
+                  <option value="Gacha (Non ED &amp; BP)5">Gacha (Non ED &amp; BP) (LVL x5 BBS)</option>
+                  <option value="Gallimimus4">Gallimimus (LVL x4 BBS)</option>
+                  <option value="Gasbag5">Gasbag (LVL x5 BBS)</option>
+                  <option value="Giant Bee4">Giant Bee (LVL x4 BBS)</option>
+                  <option value="Gigantopithecus5">Gigantopithecus (LVL x5 BBS)</option>
+                  <option value="Gigantosaur6">Gigantosaur (LVL x6 BBS)</option>
+                  <option value="Glow Tail5">Glow Tail (LVL x5 BBS)</option>
+                  <option value="Griffin5">Griffin (LVL x5 BBS)</option>
+                  <option value="Hesperornis3">Hesperornis (LVL x3 BBS)</option>
+                  <option value="Hydenadon4">Hydenadon (LVL x4 BBS)</option>
+                  <option value="Ice Elemental6">Ice Elemental (LVL x6 BBS)</option>
+                  <option value="Ichthyornis3">Ichthyornis (LVL x3 BBS)</option>
+                  <option value="Iguanodon3">Iguanodon (LVL x3 BBS)</option>
+                  <option value="Jerboa5">Jerboa (LVL x5 BBS)</option>
+                  <option value="Kairaku3">Kairaku (LVL x3 BBS)</option>
+                  <option value="Kaprosuchus4">Kaprosuchus4 BBS)</option>
+                  <option value="Karkinos6">Karkinos (LVL x6 BBS)</option>
+                  <option value="Kentrosaurus4">Kentrosaurus (LVL x4 BBS)</option>
+                  <option value="Lamprey5">Lamprey (LVL x5 BBS)</option>
+                  <option value="Lightning Wyvern6">Lightning Wyvern (LVL x6 BBS)</option>
+                  <option value="Liopleurodon4">Liopleurodon (LVL x4 BBS)</option>
+                  <option value="Lymantria3">Lymantria (LVL x3 BBS)</option>
+                  <option value="Mammoth5">Mammoth (LVL x5 BBS)</option>
+                  <option value="Managarmr6">Managarmr (LVL x6 BBS)</option>
+                  <option value="Manta3">Manta (LVL x3 BBS)</option>
+                  <option value="Mantis6">Mantis (LVL x6 BBS)</option>
+                  <option value="Megalania4">Megalania (LVL x4 BBS)</option>
+                  <option value="Megalodon5">Megalodon (LVL x5 BBS)</option>
+                  <option value="Megalosaurus3">Megalosaurus (LVL x3 BBS)</option>
+                  <option value="Megatherium4">Megatherium (LVL x4 BBS)</option>
+                  <option value="Mek5">Mek (LVL x5 BBS)</option>
+                  <option value="Mesopithecus4">Mesopithecus (LVL x4 BBS)</option>
+                  <option value="Micro Raptor3">Micro Raptor (LVL x3 BBS)</option>
+                  <option value="Morellatops3">Morellatops (LVL x3 BBS)</option>
+                  <option value="Moschops3">Moschops (LVL x3 BBS)</option>
+                  <option value="Mossasaur6">Mossasaur (LVL x6 BBS)</option>
+                  <option value="Onyc3">Onyc (LVL x3 BBS)</option>
+                  <option value="Otter4">Otter (LVL x4 BBS)</option>
+                  <option value="Oviraptor4">Oviraptor (LVL x4 BBS)</option>
+                  <option value="Ovis4">Ovis (LVL x4 BBS)</option>
+                  <option value="Pachy3">Pachy (LVL x3 BBS)</option>
+                  <option value="Pachy Rhino3">Pachy Rhino (LVL x3 BBS)</option>
+                  <option value="Paraceratherium4">Paraceratherium (LVL x4 BBS)</option>
+                  <option value="Parasaur5">Parasaur (LVL x5 BBS)</option>
+                  <option value="Pegomastax3">Pegomastax (LVL x3 BBS)</option>
+                  <option value="Pelagornis3">Pelagornis (LVL x3 BBS)</option>
+                  <option value="Phiomia3">Phiomia (LVL x3 BBS)</option>
+                  <option value="Phoenix6">Phoenix (LVL x6 BBS)</option>
+                  <option value="Plesiosaur5">Plesiosaur (LVL x5 BBS)</option>
+                  <option value="Poison Wyvern6">Poison Wyvern (LVL x6 BBS)</option>
+                  <option value="Procoptodon4">Procoptodon (LVL x4 BBS)</option>
+                  <option value="Pteranodon5">Pteranodon (LVL x5 BBS)</option>
+                  <option value="Pulmino (Scorpion)4">Pulmino (Scorpion) (LVL x4 BBS)</option>
+                  <option value="Purlovia4">Purlovia (LVL x4 BBS)</option>
+                  <option value="Raptor5">Raptor (LVL x5 BBS)</option>
+                  <option value="Ravager5">Ravager (LVL x5 BBS)</option>
+                  <option value="Reaper6">Reaper (LVL x6 BBS)</option>
+                  <option value="Rex5">Rex (LVL x5 BBS)</option>
+                  <option value="Rock Drake6">Rock Drake (LVL x6 BBS)</option>
+                  <option value="Rock Elemental6">Rock Elemental (LVL x6 BBS)</option>
+                  <option value="Roll Rat4">Roll Rat (LVL x4 BBS)</option>
+                  <option value="Sabre Tooth4">Sabre Tooth (LVL x4 BBS)</option>
+                  <option value="Sarco4">Sarco (LVL x4 BBS)</option>
+                  <option value="Shinehorn5">Shinehorn (LVL x5 BBS)</option>
+                  <option value="Snow Owl6">Snow Owl (LVL x6 BBS)</option>
+                  <option value="Spinosaurus5">Spinosaurus (LVL x5 BBS)</option>
+                  <option value="Stegosaurus4">Stegosaurus (LVL x4 BBS)</option>
+                  <option value="Tapejara4">Tapejara (LVL x4 BBS)</option>
+                  <option value="Tek Parasaur6">Tek Parasaur (LVL x6 BBS)</option>
+                  <option value="Tek Quetzal6">Tek Quetzal (LVL x6 BBS)</option>
+                  <option value="Tek Raptor6">Tek Raptor (LVL x6 BBS)</option>
+                  <option value="Tek Rex6">Tek Rex (LVL x6 BBS)</option>
+                  <option value="Tek Stego5">Tek Stego (LVL x5 BBS)</option>
+                  <option value="Terror Bird3">Terror Bird (LVL x3 BBS)</option>
+                  <option value="Therizinosaur4">Therizinosaur (LVL x4 BBS)</option>
+                  <option value="Thorny Dragon4">Thorny Dragon (LVL x4 BBS)</option>
+                  <option value="Thylacoleo5">Thylacoleo (LVL x5 BBS)</option>
+                  <option value="Titanoboa3">Titanoboa (LVL x3 BBS)</option>
+                  <option value="Triceratops3">Triceratops (LVL x3 BBS)</option>
+                  <option value="Trilobite3">Trilobite (LVL x3 BBS)</option>
+                  <option value="Troodon3">Troodon (LVL x3 BBS)</option>
+                  <option value="Tusoteuthis6">Tusoteuthis (LVL x6 BBS)</option>
+                  <option value="Unicorn6">Unicorn (LVL x6 BBS)</option>
+                  <option value="Velonosaur5">Velonosaur (LVL x5 BBS)</option>
+                  <option value="Vulture3">Vulture (LVL x3 BBS)</option>
+                  <option value="Whooly Rhino3">Whooly Rhino (LVL x3 BBS)</option>
+                  <option value="Yutyrannus5">Yutyrannus (LVL x5 BBS)</option>
+            </select>
+            </div>
+      </div>    
+        
+        <div class="selectdiano"><label for="level1">Level:</label>
+          <div><input name="level5" type="number" class="level" size="8"></div>
+      </div>
+        
+      </div>
+
+      <div class="d-flex justify-content-around pl-4 pr-4">	
+        <div class="selectdiano" ><label for="dino6">Select a Dino:</label>        <div >
+              <select name="dino6" class="select"">
+                  <option value="Allosaurus5" selected="selected">Allosaurus (LVL x5 BBS)</option>
+                  <option value="Angler3">Angler (LVL x3 BBS)</option>
+                  <option value="Ankylosaurus4">Ankylosaurus (LVL x4 BBS)</option>
+                  <option value="Araneo3">Araneo (LVL x3 BBS)</option>
+                  <option value="Archaeopteryx3">Archaeopteryx (LVL x3 BBS)</option>
+                  <option value="Argentavis5">Argentavis (LVL x5 BBS)</option>
+                  <option value="Arthropleura4">Arthropleura (LVL x4 BBS)</option>
+                  <option value="Baryonyx5">Baryonyx (LVL x5 BBS)</option>
+                  <option value="Basilisk5">Basilisk (LVL x5 BBS)</option>
+                  <option value="Basilosaurus5">Basilosaurus (LVL x5 BBS)</option>
+                  <option value="Beelzebufo4">Beelzebufo (LVL x4 BBS)</option>
+                  <option value="Bulbdog5">Bulbdog (LVL x5 BBS)</option>
+                  <option value="Chalk Elemental6">Chalk Elemental (LVL x6 BBS)</option>
+                  <option value="Carbonemys3">Carbonemys (LVL x3 BBS)</option>
+                  <option value="Carnotaurus5">Carnotaurus (LVL x5 BBS)</option>
+                  <option value="Catroides3">Catroides (LVL x3 BBS)</option>
+                  <option value="Chalcotherius3">Chalcotherius (LVL x3 BBS)</option>
+                  <option value="Compy3">Compy (LVL x3 BBS)</option>
+                  <option value="Daeodon3">Daeodon (LVL x3 BBS)</option>
+                  <option value="Deinonychus6">Deinonychus (LVL x6 BBS)</option>
+                  <option value="Dilophosaurus4">Dilophosaurus (LVL x4 BBS)</option>
+                  <option value="Dimorphodon4">Dimorphodon (LVL x4 BBS)</option>
+                  <option value="Diplocaulus4">Diplocaulus (LVL x4 BBS)</option>
+                  <option value="Diplodocus3">Diplodocus (LVL x3 BBS)</option>
+                  <option value="Dire Bear5">Dire Bear (LVL x5 BBS)</option>
+                  <option value="Dire Polar Bear6">Dire Polar Bear (LVL x6 BBS)</option>
+                  <option value="Dire World5">Dire World (LVL x5 BBS)</option>
+                  <option value="Doedicurus3">Doedicurus (LVL x3 BBS)</option>
+                  <option value="Duncleosaurus5">Duncleosaurus (LVL x5 BBS)</option>
+                  <option value="Dung Beetle3">Dung Beetle (LVL x3 BBS)</option>
+                  <option value="Electrophorus3">Electrophorus (LVL x3 BBS)</option>
+                  <option value="Enforcer5">Enforcer (LVL x5 BBS)</option>
+                  <option value="Equus4">Equus (LVL x4</option>
+                  <option value="Featherlight5">Featherlight (LVL x5 BBS)</option>
+                  <option value="Fire Wyvern6">Fire Wyvern (LVL x6 BBS)</option>
+                  <option value="Gacha (ED &amp; BP)6">Gacha (ED &amp; BP) (LVL x6 BBS)</option>
+                  <option value="Gacha (Non ED &amp; BP)5">Gacha (Non ED &amp; BP) (LVL x5 BBS)</option>
+                  <option value="Gallimimus4">Gallimimus (LVL x4 BBS)</option>
+                  <option value="Gasbag5">Gasbag (LVL x5 BBS)</option>
+                  <option value="Giant Bee4">Giant Bee (LVL x4 BBS)</option>
+                  <option value="Gigantopithecus5">Gigantopithecus (LVL x5 BBS)</option>
+                  <option value="Gigantosaur6">Gigantosaur (LVL x6 BBS)</option>
+                  <option value="Glow Tail5">Glow Tail (LVL x5 BBS)</option>
+                  <option value="Griffin5">Griffin (LVL x5 BBS)</option>
+                  <option value="Hesperornis3">Hesperornis (LVL x3 BBS)</option>
+                  <option value="Hydenadon4">Hydenadon (LVL x4 BBS)</option>
+                  <option value="Ice Elemental6">Ice Elemental (LVL x6 BBS)</option>
+                  <option value="Ichthyornis3">Ichthyornis (LVL x3 BBS)</option>
+                  <option value="Iguanodon3">Iguanodon (LVL x3 BBS)</option>
+                  <option value="Jerboa5">Jerboa (LVL x5 BBS)</option>
+                  <option value="Kairaku3">Kairaku (LVL x3 BBS)</option>
+                  <option value="Kaprosuchus4">Kaprosuchus4 BBS)</option>
+                  <option value="Karkinos6">Karkinos (LVL x6 BBS)</option>
+                  <option value="Kentrosaurus4">Kentrosaurus (LVL x4 BBS)</option>
+                  <option value="Lamprey5">Lamprey (LVL x5 BBS)</option>
+                  <option value="Lightning Wyvern6">Lightning Wyvern (LVL x6 BBS)</option>
+                  <option value="Liopleurodon4">Liopleurodon (LVL x4 BBS)</option>
+                  <option value="Lymantria3">Lymantria (LVL x3 BBS)</option>
+                  <option value="Mammoth5">Mammoth (LVL x5 BBS)</option>
+                  <option value="Managarmr6">Managarmr (LVL x6 BBS)</option>
+                  <option value="Manta3">Manta (LVL x3 BBS)</option>
+                  <option value="Mantis6">Mantis (LVL x6 BBS)</option>
+                  <option value="Megalania4">Megalania (LVL x4 BBS)</option>
+                  <option value="Megalodon5">Megalodon (LVL x5 BBS)</option>
+                  <option value="Megalosaurus3">Megalosaurus (LVL x3 BBS)</option>
+                  <option value="Megatherium4">Megatherium (LVL x4 BBS)</option>
+                  <option value="Mek5">Mek (LVL x5 BBS)</option>
+                  <option value="Mesopithecus4">Mesopithecus (LVL x4 BBS)</option>
+                  <option value="Micro Raptor3">Micro Raptor (LVL x3 BBS)</option>
+                  <option value="Morellatops3">Morellatops (LVL x3 BBS)</option>
+                  <option value="Moschops3">Moschops (LVL x3 BBS)</option>
+                  <option value="Mossasaur6">Mossasaur (LVL x6 BBS)</option>
+                  <option value="Onyc3">Onyc (LVL x3 BBS)</option>
+                  <option value="Otter4">Otter (LVL x4 BBS)</option>
+                  <option value="Oviraptor4">Oviraptor (LVL x4 BBS)</option>
+                  <option value="Ovis4">Ovis (LVL x4 BBS)</option>
+                  <option value="Pachy3">Pachy (LVL x3 BBS)</option>
+                  <option value="Pachy Rhino3">Pachy Rhino (LVL x3 BBS)</option>
+                  <option value="Paraceratherium4">Paraceratherium (LVL x4 BBS)</option>
+                  <option value="Parasaur5">Parasaur (LVL x5 BBS)</option>
+                  <option value="Pegomastax3">Pegomastax (LVL x3 BBS)</option>
+                  <option value="Pelagornis3">Pelagornis (LVL x3 BBS)</option>
+                  <option value="Phiomia3">Phiomia (LVL x3 BBS)</option>
+                  <option value="Phoenix6">Phoenix (LVL x6 BBS)</option>
+                  <option value="Plesiosaur5">Plesiosaur (LVL x5 BBS)</option>
+                  <option value="Poison Wyvern6">Poison Wyvern (LVL x6 BBS)</option>
+                  <option value="Procoptodon4">Procoptodon (LVL x4 BBS)</option>
+                  <option value="Pteranodon5">Pteranodon (LVL x5 BBS)</option>
+                  <option value="Pulmino (Scorpion)4">Pulmino (Scorpion) (LVL x4 BBS)</option>
+                  <option value="Purlovia4">Purlovia (LVL x4 BBS)</option>
+                  <option value="Raptor5">Raptor (LVL x5 BBS)</option>
+                  <option value="Ravager5">Ravager (LVL x5 BBS)</option>
+                  <option value="Reaper6">Reaper (LVL x6 BBS)</option>
+                  <option value="Rex5">Rex (LVL x5 BBS)</option>
+                  <option value="Rock Drake6">Rock Drake (LVL x6 BBS)</option>
+                  <option value="Rock Elemental6">Rock Elemental (LVL x6 BBS)</option>
+                  <option value="Roll Rat4">Roll Rat (LVL x4 BBS)</option>
+                  <option value="Sabre Tooth4">Sabre Tooth (LVL x4 BBS)</option>
+                  <option value="Sarco4">Sarco (LVL x4 BBS)</option>
+                  <option value="Shinehorn5">Shinehorn (LVL x5 BBS)</option>
+                  <option value="Snow Owl6">Snow Owl (LVL x6 BBS)</option>
+                  <option value="Spinosaurus5">Spinosaurus (LVL x5 BBS)</option>
+                  <option value="Stegosaurus4">Stegosaurus (LVL x4 BBS)</option>
+                  <option value="Tapejara4">Tapejara (LVL x4 BBS)</option>
+                  <option value="Tek Parasaur6">Tek Parasaur (LVL x6 BBS)</option>
+                  <option value="Tek Quetzal6">Tek Quetzal (LVL x6 BBS)</option>
+                  <option value="Tek Raptor6">Tek Raptor (LVL x6 BBS)</option>
+                  <option value="Tek Rex6">Tek Rex (LVL x6 BBS)</option>
+                  <option value="Tek Stego5">Tek Stego (LVL x5 BBS)</option>
+                  <option value="Terror Bird3">Terror Bird (LVL x3 BBS)</option>
+                  <option value="Therizinosaur4">Therizinosaur (LVL x4 BBS)</option>
+                  <option value="Thorny Dragon4">Thorny Dragon (LVL x4 BBS)</option>
+                  <option value="Thylacoleo5">Thylacoleo (LVL x5 BBS)</option>
+                  <option value="Titanoboa3">Titanoboa (LVL x3 BBS)</option>
+                  <option value="Triceratops3">Triceratops (LVL x3 BBS)</option>
+                  <option value="Trilobite3">Trilobite (LVL x3 BBS)</option>
+                  <option value="Troodon3">Troodon (LVL x3 BBS)</option>
+                  <option value="Tusoteuthis6">Tusoteuthis (LVL x6 BBS)</option>
+                  <option value="Unicorn6">Unicorn (LVL x6 BBS)</option>
+                  <option value="Velonosaur5">Velonosaur (LVL x5 BBS)</option>
+                  <option value="Vulture3">Vulture (LVL x3 BBS)</option>
+                  <option value="Whooly Rhino3">Whooly Rhino (LVL x3 BBS)</option>
+                  <option value="Yutyrannus5">Yutyrannus (LVL x5 BBS)</option>
+            </select>
+            </div>
+      </div>    
+        
+        <div class="selectdiano"><label for="level1">Level:</label>
+          <div><input name="level6" type="number" class="level" size="8"></div>
+      </div>
+        
+      </div>
+
+      <div class="d-flex justify-content-around pl-4 pr-4">	
+        <div class="selectdiano" ><label for="dino7">Select a Dino:</label>        <div >
+              <select name="dino7" class="select"">
+                  <option value="Allosaurus5" selected="selected">Allosaurus (LVL x5 BBS)</option>
+                  <option value="Angler3">Angler (LVL x3 BBS)</option>
+                  <option value="Ankylosaurus4">Ankylosaurus (LVL x4 BBS)</option>
+                  <option value="Araneo3">Araneo (LVL x3 BBS)</option>
+                  <option value="Archaeopteryx3">Archaeopteryx (LVL x3 BBS)</option>
+                  <option value="Argentavis5">Argentavis (LVL x5 BBS)</option>
+                  <option value="Arthropleura4">Arthropleura (LVL x4 BBS)</option>
+                  <option value="Baryonyx5">Baryonyx (LVL x5 BBS)</option>
+                  <option value="Basilisk5">Basilisk (LVL x5 BBS)</option>
+                  <option value="Basilosaurus5">Basilosaurus (LVL x5 BBS)</option>
+                  <option value="Beelzebufo4">Beelzebufo (LVL x4 BBS)</option>
+                  <option value="Bulbdog5">Bulbdog (LVL x5 BBS)</option>
+                  <option value="Chalk Elemental6">Chalk Elemental (LVL x6 BBS)</option>
+                  <option value="Carbonemys3">Carbonemys (LVL x3 BBS)</option>
+                  <option value="Carnotaurus5">Carnotaurus (LVL x5 BBS)</option>
+                  <option value="Catroides3">Catroides (LVL x3 BBS)</option>
+                  <option value="Chalcotherius3">Chalcotherius (LVL x3 BBS)</option>
+                  <option value="Compy3">Compy (LVL x3 BBS)</option>
+                  <option value="Daeodon3">Daeodon (LVL x3 BBS)</option>
+                  <option value="Deinonychus6">Deinonychus (LVL x6 BBS)</option>
+                  <option value="Dilophosaurus4">Dilophosaurus (LVL x4 BBS)</option>
+                  <option value="Dimorphodon4">Dimorphodon (LVL x4 BBS)</option>
+                  <option value="Diplocaulus4">Diplocaulus (LVL x4 BBS)</option>
+                  <option value="Diplodocus3">Diplodocus (LVL x3 BBS)</option>
+                  <option value="Dire Bear5">Dire Bear (LVL x5 BBS)</option>
+                  <option value="Dire Polar Bear6">Dire Polar Bear (LVL x6 BBS)</option>
+                  <option value="Dire World5">Dire World (LVL x5 BBS)</option>
+                  <option value="Doedicurus3">Doedicurus (LVL x3 BBS)</option>
+                  <option value="Duncleosaurus5">Duncleosaurus (LVL x5 BBS)</option>
+                  <option value="Dung Beetle3">Dung Beetle (LVL x3 BBS)</option>
+                  <option value="Electrophorus3">Electrophorus (LVL x3 BBS)</option>
+                  <option value="Enforcer5">Enforcer (LVL x5 BBS)</option>
+                  <option value="Equus4">Equus (LVL x4</option>
+                  <option value="Featherlight5">Featherlight (LVL x5 BBS)</option>
+                  <option value="Fire Wyvern6">Fire Wyvern (LVL x6 BBS)</option>
+                  <option value="Gacha (ED &amp; BP)6">Gacha (ED &amp; BP) (LVL x6 BBS)</option>
+                  <option value="Gacha (Non ED &amp; BP)5">Gacha (Non ED &amp; BP) (LVL x5 BBS)</option>
+                  <option value="Gallimimus4">Gallimimus (LVL x4 BBS)</option>
+                  <option value="Gasbag5">Gasbag (LVL x5 BBS)</option>
+                  <option value="Giant Bee4">Giant Bee (LVL x4 BBS)</option>
+                  <option value="Gigantopithecus5">Gigantopithecus (LVL x5 BBS)</option>
+                  <option value="Gigantosaur6">Gigantosaur (LVL x6 BBS)</option>
+                  <option value="Glow Tail5">Glow Tail (LVL x5 BBS)</option>
+                  <option value="Griffin5">Griffin (LVL x5 BBS)</option>
+                  <option value="Hesperornis3">Hesperornis (LVL x3 BBS)</option>
+                  <option value="Hydenadon4">Hydenadon (LVL x4 BBS)</option>
+                  <option value="Ice Elemental6">Ice Elemental (LVL x6 BBS)</option>
+                  <option value="Ichthyornis3">Ichthyornis (LVL x3 BBS)</option>
+                  <option value="Iguanodon3">Iguanodon (LVL x3 BBS)</option>
+                  <option value="Jerboa5">Jerboa (LVL x5 BBS)</option>
+                  <option value="Kairaku3">Kairaku (LVL x3 BBS)</option>
+                  <option value="Kaprosuchus4">Kaprosuchus4 BBS)</option>
+                  <option value="Karkinos6">Karkinos (LVL x6 BBS)</option>
+                  <option value="Kentrosaurus4">Kentrosaurus (LVL x4 BBS)</option>
+                  <option value="Lamprey5">Lamprey (LVL x5 BBS)</option>
+                  <option value="Lightning Wyvern6">Lightning Wyvern (LVL x6 BBS)</option>
+                  <option value="Liopleurodon4">Liopleurodon (LVL x4 BBS)</option>
+                  <option value="Lymantria3">Lymantria (LVL x3 BBS)</option>
+                  <option value="Mammoth5">Mammoth (LVL x5 BBS)</option>
+                  <option value="Managarmr6">Managarmr (LVL x6 BBS)</option>
+                  <option value="Manta3">Manta (LVL x3 BBS)</option>
+                  <option value="Mantis6">Mantis (LVL x6 BBS)</option>
+                  <option value="Megalania4">Megalania (LVL x4 BBS)</option>
+                  <option value="Megalodon5">Megalodon (LVL x5 BBS)</option>
+                  <option value="Megalosaurus3">Megalosaurus (LVL x3 BBS)</option>
+                  <option value="Megatherium4">Megatherium (LVL x4 BBS)</option>
+                  <option value="Mek5">Mek (LVL x5 BBS)</option>
+                  <option value="Mesopithecus4">Mesopithecus (LVL x4 BBS)</option>
+                  <option value="Micro Raptor3">Micro Raptor (LVL x3 BBS)</option>
+                  <option value="Morellatops3">Morellatops (LVL x3 BBS)</option>
+                  <option value="Moschops3">Moschops (LVL x3 BBS)</option>
+                  <option value="Mossasaur6">Mossasaur (LVL x6 BBS)</option>
+                  <option value="Onyc3">Onyc (LVL x3 BBS)</option>
+                  <option value="Otter4">Otter (LVL x4 BBS)</option>
+                  <option value="Oviraptor4">Oviraptor (LVL x4 BBS)</option>
+                  <option value="Ovis4">Ovis (LVL x4 BBS)</option>
+                  <option value="Pachy3">Pachy (LVL x3 BBS)</option>
+                  <option value="Pachy Rhino3">Pachy Rhino (LVL x3 BBS)</option>
+                  <option value="Paraceratherium4">Paraceratherium (LVL x4 BBS)</option>
+                  <option value="Parasaur5">Parasaur (LVL x5 BBS)</option>
+                  <option value="Pegomastax3">Pegomastax (LVL x3 BBS)</option>
+                  <option value="Pelagornis3">Pelagornis (LVL x3 BBS)</option>
+                  <option value="Phiomia3">Phiomia (LVL x3 BBS)</option>
+                  <option value="Phoenix6">Phoenix (LVL x6 BBS)</option>
+                  <option value="Plesiosaur5">Plesiosaur (LVL x5 BBS)</option>
+                  <option value="Poison Wyvern6">Poison Wyvern (LVL x6 BBS)</option>
+                  <option value="Procoptodon4">Procoptodon (LVL x4 BBS)</option>
+                  <option value="Pteranodon5">Pteranodon (LVL x5 BBS)</option>
+                  <option value="Pulmino (Scorpion)4">Pulmino (Scorpion) (LVL x4 BBS)</option>
+                  <option value="Purlovia4">Purlovia (LVL x4 BBS)</option>
+                  <option value="Raptor5">Raptor (LVL x5 BBS)</option>
+                  <option value="Ravager5">Ravager (LVL x5 BBS)</option>
+                  <option value="Reaper6">Reaper (LVL x6 BBS)</option>
+                  <option value="Rex5">Rex (LVL x5 BBS)</option>
+                  <option value="Rock Drake6">Rock Drake (LVL x6 BBS)</option>
+                  <option value="Rock Elemental6">Rock Elemental (LVL x6 BBS)</option>
+                  <option value="Roll Rat4">Roll Rat (LVL x4 BBS)</option>
+                  <option value="Sabre Tooth4">Sabre Tooth (LVL x4 BBS)</option>
+                  <option value="Sarco4">Sarco (LVL x4 BBS)</option>
+                  <option value="Shinehorn5">Shinehorn (LVL x5 BBS)</option>
+                  <option value="Snow Owl6">Snow Owl (LVL x6 BBS)</option>
+                  <option value="Spinosaurus5">Spinosaurus (LVL x5 BBS)</option>
+                  <option value="Stegosaurus4">Stegosaurus (LVL x4 BBS)</option>
+                  <option value="Tapejara4">Tapejara (LVL x4 BBS)</option>
+                  <option value="Tek Parasaur6">Tek Parasaur (LVL x6 BBS)</option>
+                  <option value="Tek Quetzal6">Tek Quetzal (LVL x6 BBS)</option>
+                  <option value="Tek Raptor6">Tek Raptor (LVL x6 BBS)</option>
+                  <option value="Tek Rex6">Tek Rex (LVL x6 BBS)</option>
+                  <option value="Tek Stego5">Tek Stego (LVL x5 BBS)</option>
+                  <option value="Terror Bird3">Terror Bird (LVL x3 BBS)</option>
+                  <option value="Therizinosaur4">Therizinosaur (LVL x4 BBS)</option>
+                  <option value="Thorny Dragon4">Thorny Dragon (LVL x4 BBS)</option>
+                  <option value="Thylacoleo5">Thylacoleo (LVL x5 BBS)</option>
+                  <option value="Titanoboa3">Titanoboa (LVL x3 BBS)</option>
+                  <option value="Triceratops3">Triceratops (LVL x3 BBS)</option>
+                  <option value="Trilobite3">Trilobite (LVL x3 BBS)</option>
+                  <option value="Troodon3">Troodon (LVL x3 BBS)</option>
+                  <option value="Tusoteuthis6">Tusoteuthis (LVL x6 BBS)</option>
+                  <option value="Unicorn6">Unicorn (LVL x6 BBS)</option>
+                  <option value="Velonosaur5">Velonosaur (LVL x5 BBS)</option>
+                  <option value="Vulture3">Vulture (LVL x3 BBS)</option>
+                  <option value="Whooly Rhino3">Whooly Rhino (LVL x3 BBS)</option>
+                  <option value="Yutyrannus5">Yutyrannus (LVL x5 BBS)</option>
+            </select>
+            </div>
+      </div>    
+        
+        <div class="selectdiano"><label for="level1">Level:</label>
+          <div><input name="level7" type="number" class="level" size="8"></div>
+      </div>
+        
+      </div>
+
+      <div class="d-flex justify-content-around pl-4 pr-4">	
+        <div class="selectdiano" ><label for="dino8">Select a Dino:</label>        <div >
+              <select name="dino8" class="select"">
+                  <option value="Allosaurus5" selected="selected">Allosaurus (LVL x5 BBS)</option>
+                  <option value="Angler3">Angler (LVL x3 BBS)</option>
+                  <option value="Ankylosaurus4">Ankylosaurus (LVL x4 BBS)</option>
+                  <option value="Araneo3">Araneo (LVL x3 BBS)</option>
+                  <option value="Archaeopteryx3">Archaeopteryx (LVL x3 BBS)</option>
+                  <option value="Argentavis5">Argentavis (LVL x5 BBS)</option>
+                  <option value="Arthropleura4">Arthropleura (LVL x4 BBS)</option>
+                  <option value="Baryonyx5">Baryonyx (LVL x5 BBS)</option>
+                  <option value="Basilisk5">Basilisk (LVL x5 BBS)</option>
+                  <option value="Basilosaurus5">Basilosaurus (LVL x5 BBS)</option>
+                  <option value="Beelzebufo4">Beelzebufo (LVL x4 BBS)</option>
+                  <option value="Bulbdog5">Bulbdog (LVL x5 BBS)</option>
+                  <option value="Chalk Elemental6">Chalk Elemental (LVL x6 BBS)</option>
+                  <option value="Carbonemys3">Carbonemys (LVL x3 BBS)</option>
+                  <option value="Carnotaurus5">Carnotaurus (LVL x5 BBS)</option>
+                  <option value="Catroides3">Catroides (LVL x3 BBS)</option>
+                  <option value="Chalcotherius3">Chalcotherius (LVL x3 BBS)</option>
+                  <option value="Compy3">Compy (LVL x3 BBS)</option>
+                  <option value="Daeodon3">Daeodon (LVL x3 BBS)</option>
+                  <option value="Deinonychus6">Deinonychus (LVL x6 BBS)</option>
+                  <option value="Dilophosaurus4">Dilophosaurus (LVL x4 BBS)</option>
+                  <option value="Dimorphodon4">Dimorphodon (LVL x4 BBS)</option>
+                  <option value="Diplocaulus4">Diplocaulus (LVL x4 BBS)</option>
+                  <option value="Diplodocus3">Diplodocus (LVL x3 BBS)</option>
+                  <option value="Dire Bear5">Dire Bear (LVL x5 BBS)</option>
+                  <option value="Dire Polar Bear6">Dire Polar Bear (LVL x6 BBS)</option>
+                  <option value="Dire World5">Dire World (LVL x5 BBS)</option>
+                  <option value="Doedicurus3">Doedicurus (LVL x3 BBS)</option>
+                  <option value="Duncleosaurus5">Duncleosaurus (LVL x5 BBS)</option>
+                  <option value="Dung Beetle3">Dung Beetle (LVL x3 BBS)</option>
+                  <option value="Electrophorus3">Electrophorus (LVL x3 BBS)</option>
+                  <option value="Enforcer5">Enforcer (LVL x5 BBS)</option>
+                  <option value="Equus4">Equus (LVL x4</option>
+                  <option value="Featherlight5">Featherlight (LVL x5 BBS)</option>
+                  <option value="Fire Wyvern6">Fire Wyvern (LVL x6 BBS)</option>
+                  <option value="Gacha (ED &amp; BP)6">Gacha (ED &amp; BP) (LVL x6 BBS)</option>
+                  <option value="Gacha (Non ED &amp; BP)5">Gacha (Non ED &amp; BP) (LVL x5 BBS)</option>
+                  <option value="Gallimimus4">Gallimimus (LVL x4 BBS)</option>
+                  <option value="Gasbag5">Gasbag (LVL x5 BBS)</option>
+                  <option value="Giant Bee4">Giant Bee (LVL x4 BBS)</option>
+                  <option value="Gigantopithecus5">Gigantopithecus (LVL x5 BBS)</option>
+                  <option value="Gigantosaur6">Gigantosaur (LVL x6 BBS)</option>
+                  <option value="Glow Tail5">Glow Tail (LVL x5 BBS)</option>
+                  <option value="Griffin5">Griffin (LVL x5 BBS)</option>
+                  <option value="Hesperornis3">Hesperornis (LVL x3 BBS)</option>
+                  <option value="Hydenadon4">Hydenadon (LVL x4 BBS)</option>
+                  <option value="Ice Elemental6">Ice Elemental (LVL x6 BBS)</option>
+                  <option value="Ichthyornis3">Ichthyornis (LVL x3 BBS)</option>
+                  <option value="Iguanodon3">Iguanodon (LVL x3 BBS)</option>
+                  <option value="Jerboa5">Jerboa (LVL x5 BBS)</option>
+                  <option value="Kairaku3">Kairaku (LVL x3 BBS)</option>
+                  <option value="Kaprosuchus4">Kaprosuchus4 BBS)</option>
+                  <option value="Karkinos6">Karkinos (LVL x6 BBS)</option>
+                  <option value="Kentrosaurus4">Kentrosaurus (LVL x4 BBS)</option>
+                  <option value="Lamprey5">Lamprey (LVL x5 BBS)</option>
+                  <option value="Lightning Wyvern6">Lightning Wyvern (LVL x6 BBS)</option>
+                  <option value="Liopleurodon4">Liopleurodon (LVL x4 BBS)</option>
+                  <option value="Lymantria3">Lymantria (LVL x3 BBS)</option>
+                  <option value="Mammoth5">Mammoth (LVL x5 BBS)</option>
+                  <option value="Managarmr6">Managarmr (LVL x6 BBS)</option>
+                  <option value="Manta3">Manta (LVL x3 BBS)</option>
+                  <option value="Mantis6">Mantis (LVL x6 BBS)</option>
+                  <option value="Megalania4">Megalania (LVL x4 BBS)</option>
+                  <option value="Megalodon5">Megalodon (LVL x5 BBS)</option>
+                  <option value="Megalosaurus3">Megalosaurus (LVL x3 BBS)</option>
+                  <option value="Megatherium4">Megatherium (LVL x4 BBS)</option>
+                  <option value="Mek5">Mek (LVL x5 BBS)</option>
+                  <option value="Mesopithecus4">Mesopithecus (LVL x4 BBS)</option>
+                  <option value="Micro Raptor3">Micro Raptor (LVL x3 BBS)</option>
+                  <option value="Morellatops3">Morellatops (LVL x3 BBS)</option>
+                  <option value="Moschops3">Moschops (LVL x3 BBS)</option>
+                  <option value="Mossasaur6">Mossasaur (LVL x6 BBS)</option>
+                  <option value="Onyc3">Onyc (LVL x3 BBS)</option>
+                  <option value="Otter4">Otter (LVL x4 BBS)</option>
+                  <option value="Oviraptor4">Oviraptor (LVL x4 BBS)</option>
+                  <option value="Ovis4">Ovis (LVL x4 BBS)</option>
+                  <option value="Pachy3">Pachy (LVL x3 BBS)</option>
+                  <option value="Pachy Rhino3">Pachy Rhino (LVL x3 BBS)</option>
+                  <option value="Paraceratherium4">Paraceratherium (LVL x4 BBS)</option>
+                  <option value="Parasaur5">Parasaur (LVL x5 BBS)</option>
+                  <option value="Pegomastax3">Pegomastax (LVL x3 BBS)</option>
+                  <option value="Pelagornis3">Pelagornis (LVL x3 BBS)</option>
+                  <option value="Phiomia3">Phiomia (LVL x3 BBS)</option>
+                  <option value="Phoenix6">Phoenix (LVL x6 BBS)</option>
+                  <option value="Plesiosaur5">Plesiosaur (LVL x5 BBS)</option>
+                  <option value="Poison Wyvern6">Poison Wyvern (LVL x6 BBS)</option>
+                  <option value="Procoptodon4">Procoptodon (LVL x4 BBS)</option>
+                  <option value="Pteranodon5">Pteranodon (LVL x5 BBS)</option>
+                  <option value="Pulmino (Scorpion)4">Pulmino (Scorpion) (LVL x4 BBS)</option>
+                  <option value="Purlovia4">Purlovia (LVL x4 BBS)</option>
+                  <option value="Raptor5">Raptor (LVL x5 BBS)</option>
+                  <option value="Ravager5">Ravager (LVL x5 BBS)</option>
+                  <option value="Reaper6">Reaper (LVL x6 BBS)</option>
+                  <option value="Rex5">Rex (LVL x5 BBS)</option>
+                  <option value="Rock Drake6">Rock Drake (LVL x6 BBS)</option>
+                  <option value="Rock Elemental6">Rock Elemental (LVL x6 BBS)</option>
+                  <option value="Roll Rat4">Roll Rat (LVL x4 BBS)</option>
+                  <option value="Sabre Tooth4">Sabre Tooth (LVL x4 BBS)</option>
+                  <option value="Sarco4">Sarco (LVL x4 BBS)</option>
+                  <option value="Shinehorn5">Shinehorn (LVL x5 BBS)</option>
+                  <option value="Snow Owl6">Snow Owl (LVL x6 BBS)</option>
+                  <option value="Spinosaurus5">Spinosaurus (LVL x5 BBS)</option>
+                  <option value="Stegosaurus4">Stegosaurus (LVL x4 BBS)</option>
+                  <option value="Tapejara4">Tapejara (LVL x4 BBS)</option>
+                  <option value="Tek Parasaur6">Tek Parasaur (LVL x6 BBS)</option>
+                  <option value="Tek Quetzal6">Tek Quetzal (LVL x6 BBS)</option>
+                  <option value="Tek Raptor6">Tek Raptor (LVL x6 BBS)</option>
+                  <option value="Tek Rex6">Tek Rex (LVL x6 BBS)</option>
+                  <option value="Tek Stego5">Tek Stego (LVL x5 BBS)</option>
+                  <option value="Terror Bird3">Terror Bird (LVL x3 BBS)</option>
+                  <option value="Therizinosaur4">Therizinosaur (LVL x4 BBS)</option>
+                  <option value="Thorny Dragon4">Thorny Dragon (LVL x4 BBS)</option>
+                  <option value="Thylacoleo5">Thylacoleo (LVL x5 BBS)</option>
+                  <option value="Titanoboa3">Titanoboa (LVL x3 BBS)</option>
+                  <option value="Triceratops3">Triceratops (LVL x3 BBS)</option>
+                  <option value="Trilobite3">Trilobite (LVL x3 BBS)</option>
+                  <option value="Troodon3">Troodon (LVL x3 BBS)</option>
+                  <option value="Tusoteuthis6">Tusoteuthis (LVL x6 BBS)</option>
+                  <option value="Unicorn6">Unicorn (LVL x6 BBS)</option>
+                  <option value="Velonosaur5">Velonosaur (LVL x5 BBS)</option>
+                  <option value="Vulture3">Vulture (LVL x3 BBS)</option>
+                  <option value="Whooly Rhino3">Whooly Rhino (LVL x3 BBS)</option>
+                  <option value="Yutyrannus5">Yutyrannus (LVL x5 BBS)</option>
+            </select>
+            </div>
+      </div>    
+        
+        <div class="selectdiano"><label for="level1">Level:</label>
+          <div><input name="level8" type="number" class="level" size="8"></div>
+      </div>
+        
+      </div>
+
+      <div class="d-flex justify-content-around pl-4 pr-4">	
+        <div class="selectdiano" ><label for="dino9">Select a Dino:</label>        <div >
+              <select name="dino9" class="select"">
+                  <option value="Allosaurus5" selected="selected">Allosaurus (LVL x5 BBS)</option>
+                  <option value="Angler3">Angler (LVL x3 BBS)</option>
+                  <option value="Ankylosaurus4">Ankylosaurus (LVL x4 BBS)</option>
+                  <option value="Araneo3">Araneo (LVL x3 BBS)</option>
+                  <option value="Archaeopteryx3">Archaeopteryx (LVL x3 BBS)</option>
+                  <option value="Argentavis5">Argentavis (LVL x5 BBS)</option>
+                  <option value="Arthropleura4">Arthropleura (LVL x4 BBS)</option>
+                  <option value="Baryonyx5">Baryonyx (LVL x5 BBS)</option>
+                  <option value="Basilisk5">Basilisk (LVL x5 BBS)</option>
+                  <option value="Basilosaurus5">Basilosaurus (LVL x5 BBS)</option>
+                  <option value="Beelzebufo4">Beelzebufo (LVL x4 BBS)</option>
+                  <option value="Bulbdog5">Bulbdog (LVL x5 BBS)</option>
+                  <option value="Chalk Elemental6">Chalk Elemental (LVL x6 BBS)</option>
+                  <option value="Carbonemys3">Carbonemys (LVL x3 BBS)</option>
+                  <option value="Carnotaurus5">Carnotaurus (LVL x5 BBS)</option>
+                  <option value="Catroides3">Catroides (LVL x3 BBS)</option>
+                  <option value="Chalcotherius3">Chalcotherius (LVL x3 BBS)</option>
+                  <option value="Compy3">Compy (LVL x3 BBS)</option>
+                  <option value="Daeodon3">Daeodon (LVL x3 BBS)</option>
+                  <option value="Deinonychus6">Deinonychus (LVL x6 BBS)</option>
+                  <option value="Dilophosaurus4">Dilophosaurus (LVL x4 BBS)</option>
+                  <option value="Dimorphodon4">Dimorphodon (LVL x4 BBS)</option>
+                  <option value="Diplocaulus4">Diplocaulus (LVL x4 BBS)</option>
+                  <option value="Diplodocus3">Diplodocus (LVL x3 BBS)</option>
+                  <option value="Dire Bear5">Dire Bear (LVL x5 BBS)</option>
+                  <option value="Dire Polar Bear6">Dire Polar Bear (LVL x6 BBS)</option>
+                  <option value="Dire World5">Dire World (LVL x5 BBS)</option>
+                  <option value="Doedicurus3">Doedicurus (LVL x3 BBS)</option>
+                  <option value="Duncleosaurus5">Duncleosaurus (LVL x5 BBS)</option>
+                  <option value="Dung Beetle3">Dung Beetle (LVL x3 BBS)</option>
+                  <option value="Electrophorus3">Electrophorus (LVL x3 BBS)</option>
+                  <option value="Enforcer5">Enforcer (LVL x5 BBS)</option>
+                  <option value="Equus4">Equus (LVL x4</option>
+                  <option value="Featherlight5">Featherlight (LVL x5 BBS)</option>
+                  <option value="Fire Wyvern6">Fire Wyvern (LVL x6 BBS)</option>
+                  <option value="Gacha (ED &amp; BP)6">Gacha (ED &amp; BP) (LVL x6 BBS)</option>
+                  <option value="Gacha (Non ED &amp; BP)5">Gacha (Non ED &amp; BP) (LVL x5 BBS)</option>
+                  <option value="Gallimimus4">Gallimimus (LVL x4 BBS)</option>
+                  <option value="Gasbag5">Gasbag (LVL x5 BBS)</option>
+                  <option value="Giant Bee4">Giant Bee (LVL x4 BBS)</option>
+                  <option value="Gigantopithecus5">Gigantopithecus (LVL x5 BBS)</option>
+                  <option value="Gigantosaur6">Gigantosaur (LVL x6 BBS)</option>
+                  <option value="Glow Tail5">Glow Tail (LVL x5 BBS)</option>
+                  <option value="Griffin5">Griffin (LVL x5 BBS)</option>
+                  <option value="Hesperornis3">Hesperornis (LVL x3 BBS)</option>
+                  <option value="Hydenadon4">Hydenadon (LVL x4 BBS)</option>
+                  <option value="Ice Elemental6">Ice Elemental (LVL x6 BBS)</option>
+                  <option value="Ichthyornis3">Ichthyornis (LVL x3 BBS)</option>
+                  <option value="Iguanodon3">Iguanodon (LVL x3 BBS)</option>
+                  <option value="Jerboa5">Jerboa (LVL x5 BBS)</option>
+                  <option value="Kairaku3">Kairaku (LVL x3 BBS)</option>
+                  <option value="Kaprosuchus4">Kaprosuchus4 BBS)</option>
+                  <option value="Karkinos6">Karkinos (LVL x6 BBS)</option>
+                  <option value="Kentrosaurus4">Kentrosaurus (LVL x4 BBS)</option>
+                  <option value="Lamprey5">Lamprey (LVL x5 BBS)</option>
+                  <option value="Lightning Wyvern6">Lightning Wyvern (LVL x6 BBS)</option>
+                  <option value="Liopleurodon4">Liopleurodon (LVL x4 BBS)</option>
+                  <option value="Lymantria3">Lymantria (LVL x3 BBS)</option>
+                  <option value="Mammoth5">Mammoth (LVL x5 BBS)</option>
+                  <option value="Managarmr6">Managarmr (LVL x6 BBS)</option>
+                  <option value="Manta3">Manta (LVL x3 BBS)</option>
+                  <option value="Mantis6">Mantis (LVL x6 BBS)</option>
+                  <option value="Megalania4">Megalania (LVL x4 BBS)</option>
+                  <option value="Megalodon5">Megalodon (LVL x5 BBS)</option>
+                  <option value="Megalosaurus3">Megalosaurus (LVL x3 BBS)</option>
+                  <option value="Megatherium4">Megatherium (LVL x4 BBS)</option>
+                  <option value="Mek5">Mek (LVL x5 BBS)</option>
+                  <option value="Mesopithecus4">Mesopithecus (LVL x4 BBS)</option>
+                  <option value="Micro Raptor3">Micro Raptor (LVL x3 BBS)</option>
+                  <option value="Morellatops3">Morellatops (LVL x3 BBS)</option>
+                  <option value="Moschops3">Moschops (LVL x3 BBS)</option>
+                  <option value="Mossasaur6">Mossasaur (LVL x6 BBS)</option>
+                  <option value="Onyc3">Onyc (LVL x3 BBS)</option>
+                  <option value="Otter4">Otter (LVL x4 BBS)</option>
+                  <option value="Oviraptor4">Oviraptor (LVL x4 BBS)</option>
+                  <option value="Ovis4">Ovis (LVL x4 BBS)</option>
+                  <option value="Pachy3">Pachy (LVL x3 BBS)</option>
+                  <option value="Pachy Rhino3">Pachy Rhino (LVL x3 BBS)</option>
+                  <option value="Paraceratherium4">Paraceratherium (LVL x4 BBS)</option>
+                  <option value="Parasaur5">Parasaur (LVL x5 BBS)</option>
+                  <option value="Pegomastax3">Pegomastax (LVL x3 BBS)</option>
+                  <option value="Pelagornis3">Pelagornis (LVL x3 BBS)</option>
+                  <option value="Phiomia3">Phiomia (LVL x3 BBS)</option>
+                  <option value="Phoenix6">Phoenix (LVL x6 BBS)</option>
+                  <option value="Plesiosaur5">Plesiosaur (LVL x5 BBS)</option>
+                  <option value="Poison Wyvern6">Poison Wyvern (LVL x6 BBS)</option>
+                  <option value="Procoptodon4">Procoptodon (LVL x4 BBS)</option>
+                  <option value="Pteranodon5">Pteranodon (LVL x5 BBS)</option>
+                  <option value="Pulmino (Scorpion)4">Pulmino (Scorpion) (LVL x4 BBS)</option>
+                  <option value="Purlovia4">Purlovia (LVL x4 BBS)</option>
+                  <option value="Raptor5">Raptor (LVL x5 BBS)</option>
+                  <option value="Ravager5">Ravager (LVL x5 BBS)</option>
+                  <option value="Reaper6">Reaper (LVL x6 BBS)</option>
+                  <option value="Rex5">Rex (LVL x5 BBS)</option>
+                  <option value="Rock Drake6">Rock Drake (LVL x6 BBS)</option>
+                  <option value="Rock Elemental6">Rock Elemental (LVL x6 BBS)</option>
+                  <option value="Roll Rat4">Roll Rat (LVL x4 BBS)</option>
+                  <option value="Sabre Tooth4">Sabre Tooth (LVL x4 BBS)</option>
+                  <option value="Sarco4">Sarco (LVL x4 BBS)</option>
+                  <option value="Shinehorn5">Shinehorn (LVL x5 BBS)</option>
+                  <option value="Snow Owl6">Snow Owl (LVL x6 BBS)</option>
+                  <option value="Spinosaurus5">Spinosaurus (LVL x5 BBS)</option>
+                  <option value="Stegosaurus4">Stegosaurus (LVL x4 BBS)</option>
+                  <option value="Tapejara4">Tapejara (LVL x4 BBS)</option>
+                  <option value="Tek Parasaur6">Tek Parasaur (LVL x6 BBS)</option>
+                  <option value="Tek Quetzal6">Tek Quetzal (LVL x6 BBS)</option>
+                  <option value="Tek Raptor6">Tek Raptor (LVL x6 BBS)</option>
+                  <option value="Tek Rex6">Tek Rex (LVL x6 BBS)</option>
+                  <option value="Tek Stego5">Tek Stego (LVL x5 BBS)</option>
+                  <option value="Terror Bird3">Terror Bird (LVL x3 BBS)</option>
+                  <option value="Therizinosaur4">Therizinosaur (LVL x4 BBS)</option>
+                  <option value="Thorny Dragon4">Thorny Dragon (LVL x4 BBS)</option>
+                  <option value="Thylacoleo5">Thylacoleo (LVL x5 BBS)</option>
+                  <option value="Titanoboa3">Titanoboa (LVL x3 BBS)</option>
+                  <option value="Triceratops3">Triceratops (LVL x3 BBS)</option>
+                  <option value="Trilobite3">Trilobite (LVL x3 BBS)</option>
+                  <option value="Troodon3">Troodon (LVL x3 BBS)</option>
+                  <option value="Tusoteuthis6">Tusoteuthis (LVL x6 BBS)</option>
+                  <option value="Unicorn6">Unicorn (LVL x6 BBS)</option>
+                  <option value="Velonosaur5">Velonosaur (LVL x5 BBS)</option>
+                  <option value="Vulture3">Vulture (LVL x3 BBS)</option>
+                  <option value="Whooly Rhino3">Whooly Rhino (LVL x3 BBS)</option>
+                  <option value="Yutyrannus5">Yutyrannus (LVL x5 BBS)</option>
+            </select>
+            </div>
+      </div>    
+        
+        <div class="selectdiano"><label for="level1">Level:</label>
+          <div><input name="level9" type="number" class="level" size="8"></div>
+      </div>
+        
+      </div>
+
+      <div class="d-flex justify-content-around pl-4 pr-4">	
+        <div class="selectdiano" ><label for="dino1">Select a Dino:</label>        <div >
+              <select name="dino10" class="select"">
+                  <option value="Allosaurus5" selected="selected">Allosaurus (LVL x5 BBS)</option>
+                  <option value="Angler3">Angler (LVL x3 BBS)</option>
+                  <option value="Ankylosaurus4">Ankylosaurus (LVL x4 BBS)</option>
+                  <option value="Araneo3">Araneo (LVL x3 BBS)</option>
+                  <option value="Archaeopteryx3">Archaeopteryx (LVL x3 BBS)</option>
+                  <option value="Argentavis5">Argentavis (LVL x5 BBS)</option>
+                  <option value="Arthropleura4">Arthropleura (LVL x4 BBS)</option>
+                  <option value="Baryonyx5">Baryonyx (LVL x5 BBS)</option>
+                  <option value="Basilisk5">Basilisk (LVL x5 BBS)</option>
+                  <option value="Basilosaurus5">Basilosaurus (LVL x5 BBS)</option>
+                  <option value="Beelzebufo4">Beelzebufo (LVL x4 BBS)</option>
+                  <option value="Bulbdog5">Bulbdog (LVL x5 BBS)</option>
+                  <option value="Chalk Elemental6">Chalk Elemental (LVL x6 BBS)</option>
+                  <option value="Carbonemys3">Carbonemys (LVL x3 BBS)</option>
+                  <option value="Carnotaurus5">Carnotaurus (LVL x5 BBS)</option>
+                  <option value="Catroides3">Catroides (LVL x3 BBS)</option>
+                  <option value="Chalcotherius3">Chalcotherius (LVL x3 BBS)</option>
+                  <option value="Compy3">Compy (LVL x3 BBS)</option>
+                  <option value="Daeodon3">Daeodon (LVL x3 BBS)</option>
+                  <option value="Deinonychus6">Deinonychus (LVL x6 BBS)</option>
+                  <option value="Dilophosaurus4">Dilophosaurus (LVL x4 BBS)</option>
+                  <option value="Dimorphodon4">Dimorphodon (LVL x4 BBS)</option>
+                  <option value="Diplocaulus4">Diplocaulus (LVL x4 BBS)</option>
+                  <option value="Diplodocus3">Diplodocus (LVL x3 BBS)</option>
+                  <option value="Dire Bear5">Dire Bear (LVL x5 BBS)</option>
+                  <option value="Dire Polar Bear6">Dire Polar Bear (LVL x6 BBS)</option>
+                  <option value="Dire World5">Dire World (LVL x5 BBS)</option>
+                  <option value="Doedicurus3">Doedicurus (LVL x3 BBS)</option>
+                  <option value="Duncleosaurus5">Duncleosaurus (LVL x5 BBS)</option>
+                  <option value="Dung Beetle3">Dung Beetle (LVL x3 BBS)</option>
+                  <option value="Electrophorus3">Electrophorus (LVL x3 BBS)</option>
+                  <option value="Enforcer5">Enforcer (LVL x5 BBS)</option>
+                  <option value="Equus4">Equus (LVL x4</option>
+                  <option value="Featherlight5">Featherlight (LVL x5 BBS)</option>
+                  <option value="Fire Wyvern6">Fire Wyvern (LVL x6 BBS)</option>
+                  <option value="Gacha (ED &amp; BP)6">Gacha (ED &amp; BP) (LVL x6 BBS)</option>
+                  <option value="Gacha (Non ED &amp; BP)5">Gacha (Non ED &amp; BP) (LVL x5 BBS)</option>
+                  <option value="Gallimimus4">Gallimimus (LVL x4 BBS)</option>
+                  <option value="Gasbag5">Gasbag (LVL x5 BBS)</option>
+                  <option value="Giant Bee4">Giant Bee (LVL x4 BBS)</option>
+                  <option value="Gigantopithecus5">Gigantopithecus (LVL x5 BBS)</option>
+                  <option value="Gigantosaur6">Gigantosaur (LVL x6 BBS)</option>
+                  <option value="Glow Tail5">Glow Tail (LVL x5 BBS)</option>
+                  <option value="Griffin5">Griffin (LVL x5 BBS)</option>
+                  <option value="Hesperornis3">Hesperornis (LVL x3 BBS)</option>
+                  <option value="Hydenadon4">Hydenadon (LVL x4 BBS)</option>
+                  <option value="Ice Elemental6">Ice Elemental (LVL x6 BBS)</option>
+                  <option value="Ichthyornis3">Ichthyornis (LVL x3 BBS)</option>
+                  <option value="Iguanodon3">Iguanodon (LVL x3 BBS)</option>
+                  <option value="Jerboa5">Jerboa (LVL x5 BBS)</option>
+                  <option value="Kairaku3">Kairaku (LVL x3 BBS)</option>
+                  <option value="Kaprosuchus4">Kaprosuchus4 BBS)</option>
+                  <option value="Karkinos6">Karkinos (LVL x6 BBS)</option>
+                  <option value="Kentrosaurus4">Kentrosaurus (LVL x4 BBS)</option>
+                  <option value="Lamprey5">Lamprey (LVL x5 BBS)</option>
+                  <option value="Lightning Wyvern6">Lightning Wyvern (LVL x6 BBS)</option>
+                  <option value="Liopleurodon4">Liopleurodon (LVL x4 BBS)</option>
+                  <option value="Lymantria3">Lymantria (LVL x3 BBS)</option>
+                  <option value="Mammoth5">Mammoth (LVL x5 BBS)</option>
+                  <option value="Managarmr6">Managarmr (LVL x6 BBS)</option>
+                  <option value="Manta3">Manta (LVL x3 BBS)</option>
+                  <option value="Mantis6">Mantis (LVL x6 BBS)</option>
+                  <option value="Megalania4">Megalania (LVL x4 BBS)</option>
+                  <option value="Megalodon5">Megalodon (LVL x5 BBS)</option>
+                  <option value="Megalosaurus3">Megalosaurus (LVL x3 BBS)</option>
+                  <option value="Megatherium4">Megatherium (LVL x4 BBS)</option>
+                  <option value="Mek5">Mek (LVL x5 BBS)</option>
+                  <option value="Mesopithecus4">Mesopithecus (LVL x4 BBS)</option>
+                  <option value="Micro Raptor3">Micro Raptor (LVL x3 BBS)</option>
+                  <option value="Morellatops3">Morellatops (LVL x3 BBS)</option>
+                  <option value="Moschops3">Moschops (LVL x3 BBS)</option>
+                  <option value="Mossasaur6">Mossasaur (LVL x6 BBS)</option>
+                  <option value="Onyc3">Onyc (LVL x3 BBS)</option>
+                  <option value="Otter4">Otter (LVL x4 BBS)</option>
+                  <option value="Oviraptor4">Oviraptor (LVL x4 BBS)</option>
+                  <option value="Ovis4">Ovis (LVL x4 BBS)</option>
+                  <option value="Pachy3">Pachy (LVL x3 BBS)</option>
+                  <option value="Pachy Rhino3">Pachy Rhino (LVL x3 BBS)</option>
+                  <option value="Paraceratherium4">Paraceratherium (LVL x4 BBS)</option>
+                  <option value="Parasaur5">Parasaur (LVL x5 BBS)</option>
+                  <option value="Pegomastax3">Pegomastax (LVL x3 BBS)</option>
+                  <option value="Pelagornis3">Pelagornis (LVL x3 BBS)</option>
+                  <option value="Phiomia3">Phiomia (LVL x3 BBS)</option>
+                  <option value="Phoenix6">Phoenix (LVL x6 BBS)</option>
+                  <option value="Plesiosaur5">Plesiosaur (LVL x5 BBS)</option>
+                  <option value="Poison Wyvern6">Poison Wyvern (LVL x6 BBS)</option>
+                  <option value="Procoptodon4">Procoptodon (LVL x4 BBS)</option>
+                  <option value="Pteranodon5">Pteranodon (LVL x5 BBS)</option>
+                  <option value="Pulmino (Scorpion)4">Pulmino (Scorpion) (LVL x4 BBS)</option>
+                  <option value="Purlovia4">Purlovia (LVL x4 BBS)</option>
+                  <option value="Raptor5">Raptor (LVL x5 BBS)</option>
+                  <option value="Ravager5">Ravager (LVL x5 BBS)</option>
+                  <option value="Reaper6">Reaper (LVL x6 BBS)</option>
+                  <option value="Rex5">Rex (LVL x5 BBS)</option>
+                  <option value="Rock Drake6">Rock Drake (LVL x6 BBS)</option>
+                  <option value="Rock Elemental6">Rock Elemental (LVL x6 BBS)</option>
+                  <option value="Roll Rat4">Roll Rat (LVL x4 BBS)</option>
+                  <option value="Sabre Tooth4">Sabre Tooth (LVL x4 BBS)</option>
+                  <option value="Sarco4">Sarco (LVL x4 BBS)</option>
+                  <option value="Shinehorn5">Shinehorn (LVL x5 BBS)</option>
+                  <option value="Snow Owl6">Snow Owl (LVL x6 BBS)</option>
+                  <option value="Spinosaurus5">Spinosaurus (LVL x5 BBS)</option>
+                  <option value="Stegosaurus4">Stegosaurus (LVL x4 BBS)</option>
+                  <option value="Tapejara4">Tapejara (LVL x4 BBS)</option>
+                  <option value="Tek Parasaur6">Tek Parasaur (LVL x6 BBS)</option>
+                  <option value="Tek Quetzal6">Tek Quetzal (LVL x6 BBS)</option>
+                  <option value="Tek Raptor6">Tek Raptor (LVL x6 BBS)</option>
+                  <option value="Tek Rex6">Tek Rex (LVL x6 BBS)</option>
+                  <option value="Tek Stego5">Tek Stego (LVL x5 BBS)</option>
+                  <option value="Terror Bird3">Terror Bird (LVL x3 BBS)</option>
+                  <option value="Therizinosaur4">Therizinosaur (LVL x4 BBS)</option>
+                  <option value="Thorny Dragon4">Thorny Dragon (LVL x4 BBS)</option>
+                  <option value="Thylacoleo5">Thylacoleo (LVL x5 BBS)</option>
+                  <option value="Titanoboa3">Titanoboa (LVL x3 BBS)</option>
+                  <option value="Triceratops3">Triceratops (LVL x3 BBS)</option>
+                  <option value="Trilobite3">Trilobite (LVL x3 BBS)</option>
+                  <option value="Troodon3">Troodon (LVL x3 BBS)</option>
+                  <option value="Tusoteuthis6">Tusoteuthis (LVL x6 BBS)</option>
+                  <option value="Unicorn6">Unicorn (LVL x6 BBS)</option>
+                  <option value="Velonosaur5">Velonosaur (LVL x5 BBS)</option>
+                  <option value="Vulture3">Vulture (LVL x3 BBS)</option>
+                  <option value="Whooly Rhino3">Whooly Rhino (LVL x3 BBS)</option>
+                  <option value="Yutyrannus5">Yutyrannus (LVL x5 BBS)</option>
+            </select>
+            </div>
+      </div>    
+        
+        <div class="selectdiano"><label for="level1">Level:</label>
+          <div><input name="level10" type="number" class="level" size="8"></div>
+      </div>
+        
+      </div>
+
+
+      
+          <div class="d-flex">
+            <div>
+            <strong>PREPACKED DROPS AVAILABLE</strong><br>
+          * Note: TTS does not sell Element. Element can be found ingame and as a reward in our donation drops.<br>
+           </div>
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width:400px;" ><strong>Tek Starter Pack - 3,000 BBS</strong><br>
+                Tek Teleporter, Tek Generator, Tek Transmitter</div style="width:400px;">
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty1" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Tek Knight Pack - 7,000 BBS</strong><br>
+                2 Sets of Tek Armor &amp; 2 Tek Shields</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty2" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Tek Soldier Pack - 12,000 BBS</strong><br>
+                2 Sets of Tek Armor, 2 Tek Shields, 2 Tek Rifles, 25 Tek Grenades, 25 Tek Gravity Grenades</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty3" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Tek Builder Pack - 20,000 BBS</strong><br>
+                2 Tek Behemoth Gates &amp; Frames, 500 Stack of All Tek Structures Excluding S+ Tek Structures</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty4" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Tek Master Builder Pack - 30,000 BBS</strong><br>
+                2 Tek Behemoth Gates &amp; Frames, 500 Stack of All Tek Structures Including S+ Tek Structures</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty5" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Viking Builder Pack - 15,000 BBS</strong><br>
+                2 Stone Behemoth Gates &amp; Frames, 500 Stack of All Stone and Thatch Structures</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty6" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Tek Gate Drop - 10,000 BBS</strong><br>
+                40 Pack of Tek Dino Gates and Doors</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty7" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Wood Gate Drop - 2,000 BBS</strong><br>
+                40 Pack of Wood Gates and Doors</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty8" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Stone Gate Drop - 4,000 BBS</strong><br>
+                40 Pack of Stone Gates and Doors</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty9" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Metal Gate Drop - 6,000 BBS</strong><br>
+                40 Pack of Metal Gates and Doors</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty10" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Glass Structure Drop - 14,000 BBS</strong><br>
+                500 Stack of All Greenhouse Structures</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty11" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Wood Structure Drop - 15,000 BBS</strong><br>
+                500 Stack of All Wood Structures - No Gates</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty12" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Stone Structure Drop - 16,000 BBS</strong><br>
+                500 Stack of All Stone Structures - No Gates</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty13" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Stone Structure Drop - 16,000 BBS</strong><br>
+                500 Stack of All Stone Structures - No Gates</div>
+              <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty14" type="number" id="packqty" size="8" class="pack"></div></div>
+              
+          </div>
+
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Metal Structure Drop - 17,000 BBS</strong><br>
+      500 Stack of All Metal Structures - No Gates</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty15" type="number" id="packqty" size="8" class="pack"></div></div>
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Hunter Pack - 7,500 BBS</strong><br>
+            1 Ascendent Longneck Rifle, 1 Ascendent Crossbow, 100 Stack of Shocking Tranquilizer Darts, 25 Stack of All Kibbles</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty16" type="number" id="packqty" size="8" class="pack"></div></div>
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Master Hunter Pack - 13,000 BBS</strong><br>
+              2 Ascendent Longneck Rifles, 2 Ascendent Crossbows</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty17" type="number" id="packqty" size="8" class="pack"></div></div>
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Air Conditioner Pacl - 4,000 BBS</strong><br>
+              40 Pack of Air Conditioners</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty18" type="number" id="packqty" size="8" class="pack"></div></div>
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Vault Pack - 4,000 BBS</strong><br>
+              20 Pack of Vaults</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty19" type="number" id="packqty" size="8" class="pack"></div></div>
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Painter Pack - 5,000 BBS</strong><br>
+              100 Stack of All Colors &amp; 2 Spray Painters</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty20" type="number" id="packqty" size="8" class="pack"></div></div>
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Fertilizer Pack - 3,500 BBS</strong><br>
+              100 Pack of Fertilizer</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty21" type="number" id="packqty" size="8" class="pack"></div></div>
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Tek Replicator Pack - 5,000 BBS</strong><br>
+              1 Tek Replicator</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty22" type="number" id="packqty" size="8" class="pack"></div></div>
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Cloning Chamber Pack - 5,000 BBS</strong><br>
+              1 Cloning Chamber</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty23" type="number" id="packqty" size="8" class="pack"></div></div>
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Hungry Dino Pack - 4,000 BBS</strong><br>
+              20 Pack of Tek Troughs</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty24" type="number" id="packqty" size="8" class="pack"></div></div> 
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Dedicated Storage Pack - 10,000 BBS</strong><br>
+              40 Pack of Tek Dedicated Storage Boxes</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty25" type="number" id="packqty" size="8" class="pack"></div></div> 
+          </div>
+          <div class="d-flex justify-content-around">
+            <div style="width: 400px;"><strong>Plant Turret Pack - 20,000 BBS</strong><br>
+              5 Pack of Plant Turrents - Fert Tree Variety, No Crop Plot</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty26" type="number" id="packqty" size="8" class="pack"></div></div> 
+          </div>
+
+          
+          <!-- type -->
+
+          <div class="type-container">      
+            <div class="type-width" ><strong>Single Tek Structure Stack - 3,000 BBS</strong><br>
+      500 Stack of Any ONE Tek Structure Type</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty27" type="number" id="packqty" size="8" class="pack"></div></div>
+            <div class="type" ><label><strong>Type:</strong></label>
+                <input name="singletekstr" type="text" id="textfield" size="14"></div>             
+          </div>
+          
+
+          <div class="type-container">
+                        <div class="type-width" ><strong>Single Non-Tek Structure Stack - 1,500 BBS</strong><br>
+      500 Stack of Any ONE Non-Tek Structure Type</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty28" type="number" id="packqty" size="8" class="pack"></div></div> 
+            <div class="type" ><label><strong>Type:</strong></label>
+                <input name="singlenontekstr" type="text" id="textfield" size="14"></div>
+          </div>
+          <div class="type-container">
+            <div class="type-width" ><strong>Tek Appliance Pack - 20,000 BBS</strong><br>
+      20 Stack of Any ONE Tek Appliance - Gen, TP, Transmitter, Forcefield, Turrets</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty29" type="number" id="packqty" size="8" class="pack"></div></div>
+            <div class="type" ><label><strong>Type:</strong></label>
+                <input name="tekappliance" type="text" id="textfield2" size="14"></div> 
+          </div>
+
+          <div class="type-container">            
+            <div class="type-width" ><strong>Non-Tek Appliance Pack - 10,000 BBS</strong><br>
+      20 Stack of Any ONE Non-Tek Appliance - Forge, Cooker, Grinder, Chembench, etc</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty30" type="number" id="packqty" size="8" class="pack"></div></div> 
+            <div class="type" ><label><strong>Type:</strong></label>
+                <input name="nontekappliance" type="text" id="textfield3" size="14"></div>
+          </div>
+          
+          <div class="type-container">            
+            <div class="type-width" ><strong>SM Resource Drop - 1,000 BBS</strong><br>
+      1,000 Stack of Any Harvestable Resource</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty31" type="number" id="packqty" size="8" class="pack"></div></div> 
+            <div class="type" ><label><strong>Type:</strong></label>
+                <input name="harvest1" type="text" id="textfield" size="14"></div>  
+        </div>
+          
+          <div class="type-container">            
+            <div class="type-width" ><strong>MD Resource Drop - 9,000 BBS</strong><br>
+      10,000 Stack of Any Harvestable Resource</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty32" type="number" id="packqty" size="8" class="pack"></div></div> 
+            <div class="type" ><label><strong>Type:</strong></label>
+                <input name="harvest2" type="text" id="textfield" size="14"></div>
+          </div>
+          
+          <div class="type-container">          
+            <div class="type-width" ><strong>LG Resource Drop - 80,000 BBS</strong><br>
+      100,000 Stack of Any Harvestable Resource</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty33" type="number" id="packqty" size="8" class="pack"></div></div> 
+            <div class="type" ><label><strong>Type:</strong></label>
+                <input name="harvest3" type="text" id="textfield" size="14"></div>
+          </div>
+          <div class="type-container">            
+            <div class="type-width" ><strong>SM Craftable Drop - 2,000 BBS</strong><br>
+      1,000 Stack of Any Craftable Resource</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty34" type="number" id="packqty" size="8" class="pack"></div></div> 
+            <div class="type" ><label><strong>Type:</strong></label>
+                <input name="craft1" type="text" id="textfield" size="14"></div>
+          </div>
+          
+          <div class="type-container">            
+            <div class="type-width" ><strong>MD Craftable Drop - 18,000 BBS</strong><br>
+      10,000 Stack of Any Craftable Resource</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty35" type="number" id="packqty" size="8" class="pack"></div></div> 
+            <div class="type" ><label><strong>Type:</strong></label>
+                <input name="craft2" type="text" id="textfield" size="14"></div>
+          </div>
+          
+          <div class="type-container">            
+            <div class="type-width" ><strong>LG Craftable Drop - 160,000 BBS</strong><br>
+      100,000 Stack of Any Craftable Resource</div>
+            <div class="selectdiano" ><label>Quanity:</label> <div ><input name="packqty36" type="number" id="packqty" size="8" class="pack"></div></div>
+            <div class="type" ><label><strong>Type:</strong></label>
+                <input name="craft3" type="text" id="textfield" size="14"></div> 
+          </div>
+
+
+          
+          
+          <div class="d-flex justify-content-center">
+            <div><strong>Total Cost:</strong></div>
+            <div id="result">0</div>
+          </div>
+   
+
+          <div class="d-flex justify-content-center pt-4" >            
+            <div ><em>* The following information is REQUIRED</em></div>            
+          </div>
+
+          <div  class="d-flex justify-content-center pb-4">
+            <div class="type-width" ><strong>Tribe Name: </strong></div>
+            <div ><input name="tribename" type="text" id="textfield4" size="24"></div>            
+          </div>
+          <div class="d-flex justify-content-center"" >
+            <div class="type-width" ><strong>Discord Username: </strong></div>
+            <div ><input name="discordusername" type="text" id="textfield5" size="24"></div>            
+          </div>
+        </div>
+    </div>
+      <p class="text-center pt-4"><input type="submit"></p>
+</form>
+
+<script src="script.js"></script>     
+    </body>
+    </html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" >
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  
+   
+</head>
+
+<body id="gradient">
+    <button id="myBtn" style="float: right; margin-right:10px;">Help</button>
+    <h1 style="text-align:center;">Choose Shapes</h1>
+    <div style="display:flex; justify-content: space-around; border: 1px solid gray;">
+        <div class="image-container"><p style="text-align:center">Rectangle</p>
+        <img src="rectangle.gif" name="rectangle" width="100" height="100" onclick="selectArea(this)"/>
+        </div>
+        <div class="image-container"><p style="text-align:center">Triangle</p>
+            <img src="triangle.png" name="triangle" width="100" height="100" onclick="selectArea(this)"/>
+        </div>
+        <div class="image-container"><p style="text-align:center">parallelogram</p>
+            <img src="parallelogram.png" name="parallelogram" width="100" height="100" onclick="selectArea(this)"/>
+        </div>
+        <div class="image-container"><p style="text-align:center">Circle</p> 
+            <img src="circle.png" name="circle" width="100" height="100" onclick="selectArea(this)"/>
+        </div>
+        <div class="image-container"><p style="text-align:center">Rhombus</p> 
+            <img src="rhombus.png" name="rhombus" width="100" height="100" onclick="selectArea(this)"/>
+        </div>      
+        
+        </div>
+
+        <div style="display:flex;">
+
+            <div id="rectangle-area" class="area-block">
+                <h3>Area of rectangle</h3>
+                <div>
+                Length: <input type="text" name="rectangle-length" id="rectangle-length" placeholder="Enter value" /> <input type="text" name="units" placeholder="" value="meters" />
+                </div>
+                <div>
+                width:  <input type="text" name="rectangle-width" id="rectangle-width" placeholder="Enter value" /> <input type="text" name="units" placeholder="" value="meters" />
+                </div>
+
+                <span><strong>Area of rectangle:</strong></span>
+                <strong><span id="area-of-rectangle"></span> </strong>
+                <div>
+                <input type="button" class="btn btn-primary" value="calculate" onclick="calculateRectangleArea()" />
+                </div>
+                </div>
+
+            
+            <div id="triangle-area" class="area-block">
+                <h3>Area of triangle</h3>
+                <div>
+                    Base: <input type="text" name="triangle-base" id="triangle-base" placeholder="Enter value" /> <input type="text" name="units" placeholder="" value="meters" />
+                </div>
+                    <div>
+                    height:  <input type="text" name="triangle-height" id="triangle-height" placeholder="Enter value" /> <input type="text" name="units" placeholder="" value="meters" />
+                    </div>
+                    <span><strong>Area of triangle:</strong></span>
+                    <strong><span id="area-of-triangle"></span> </strong>                    
+                    <div>
+                    <input type="button" class="btn btn-primary" value="calculate" onclick="calculateTriangleArea()" />
+                    </div>
+                    </div>
+            </div>
+            <div id="parallelogram-area" class="area-block">
+                <h3>Area of parallelogram</h3>
+                <div>
+                    Base: <input type="text" name="parallelogram-base" id="parallelogram-base" placeholder="Enter value" /> <input type="text" name="units" placeholder="" value="meters" />
+                </div>
+                    <div>
+                    height:  <input type="text" name="parallelogram-height" id="parallelogram-height" placeholder="Enter value" /> <input type="text" name="units" placeholder="" value="meters" />
+                    </div>
+                    <span><strong>Area of parallelogram:</strong></span>
+                    <strong><span id="area-of-parallelogram"></span> </strong>
+                    <div>
+                    <input type="button" class="btn btn-primary" value="calculate" onclick="calculateParallelogramArea()" />
+                    </div>
+                    </div>
+            </div>
+            <div id="circle-area" class="area-block">
+                <h3>Area of circle</h3>
+                <div>
+                    Radius: <input type="text" name="circle-radius" id="circle-radius" placeholder="Enter value" /> <input type="text" name="units" placeholder="" value="meters" />
+                </div>
+                <span><strong>Area of circle:</strong></span>
+                <strong><span id="area-of-circle"></span> </strong>
+                    <div>
+                    <input type="button" class="btn btn-primary" value="calculate" onclick="calculateCircleArea()"/>
+                    </div>
+                    </div>
+            </div>
+            <div id="rhombus-area" class="area-block">
+                <h3>Area of rhombus</h3>
+                <div>
+                    Diagnonal1: <input type="text" name="rhombus-diagonal1" id="rhombus-diagonal1" placeholder="Enter value" /> <input type="text" name="units" placeholder="" value="meters" />
+                    </div>
+                    <div>
+                    Diagonal2:  <input type="text" name="rhombus-diagonal2" id="rhombus-diagonal2" placeholder="Enter value" /> <input type="text" name="units" placeholder="" value="meters" />
+                    </div>
+                    <span><strong>Area of rhombus:</strong></span>
+                <strong><span id="area-of-rhombus"></span> </strong>
+
+                    <div>
+                    <input type="button" class="btn btn-primary" value="calculate" onclick="calculateRhombusArea()" />
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+                        
+            
+            
+            <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="display">
+      <div class="width">
+      <h3>How to calculate area of rectangle</h3>
+<p>Enter value of length into input field given</p>
+<p>Enter value of width into input field given</p>
+<p>Press calculate button below</p>
+</div>
+<div>
+<h3>How to calculate area of triangle</h3>
+<p>Enter value of base into input field given</p>
+<p>Enter value of height into input field given</p>
+<p>Press calculate button below</p>
+</div>
+</div>
+
+<div class="display">
+<div class="width">
+
+    <h3>How to calculate area of rhombus</h3>
+<p>Enter value of diagonal one into input field given</p>
+<p>Enter value of diagonal two into input field given</p>
+<p>Press calculate button below</p>
+
+</div>
+
+<div>
+<h3>How to calculate area of circle</h3>
+<p>Enter value of radius into input field given</p>
+<p>Press calculate button below</p>
+</div>
+</div>
+<div class="display">
+<div>
+<h3>How to calculate area of parallelogram</h3>
+<p>Enter value of base into input field given</p>
+<p>Enter value of height into input field given</p>
+<p>Press calculate button below</p>
+</div>
+</div>
+    </div>
+  
+  </div>            
+
+
+
+    <script src="script.js"></script>     
+</body>
+</html>

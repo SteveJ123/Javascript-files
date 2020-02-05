@@ -423,7 +423,7 @@ $page = 'home';
                                 <li class="y"><i class="fa fa-check-circle y"></i> Assigned Mentor</li>                                                                
 
                             </ul>
-                            <br>                            
+                            <div class="mb-4" style="width:10px; height:14px;"></div>
                             <span class="text-center"><a href="register?plan=free" class="btn-large btn-rounded-green d-block text-bold" style="font-size:16px;">Join Free Package</a></span>
                         </div>
                     </div>

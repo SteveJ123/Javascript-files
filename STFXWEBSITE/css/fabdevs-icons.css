@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "fabdevs";
+  src:url("../fonts/fabdevs.eot");
+  src:url("../fonts/fabdevs.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/fabdevs.woff") format("woff"),
+    url("../fonts/fabdevs.ttf") format("truetype"),
+    url("../fonts/fabdevs.svg#fabdevs") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "fabdevs" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="fab-icon-"]:before,
+[class*=" fab-icon-"]:before {
+  font-family: "fabdevs" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fab-icon-paint-brush:before {
+  content: "\61";
+}
+.fab-icon-maintenance:before {
+  content: "\62";
+}
+.fab-icon-pencil-ruler:before {
+  content: "\63";
+}
+.fab-icon-map-pin:before {
+  content: "\64";
+}
+.fab-icon-notebook:before {
+  content: "\65";
+}
+.fab-icon-email:before {
+  content: "\66";
+}
+.fab-icon-phone:before {
+  content: "\67";
+}
+.fab-icon-man:before {
+  content: "\68";
+}
+.fab-icon-map-solid-pin:before {
+  content: "\69";
+}
+.fab-icon-share-outline:before {
+  content: "\6a";
+}
+.fab-icon-resident:before {
+  content: "\6b";
+}
+.fab-icon-hosptial:before {
+  content: "\6c";
+}
+.fab-icon-paint-brush-down:before {
+  content: "\6d";
+}
+.fab-icon-facebook:before {
+  content: "\6e";
+}
+.fab-icon-twitter:before {
+  content: "\6f";
+}
+.fab-icon-instagram:before {
+  content: "\70";
+}
+.fab-icon-linkedin:before {
+  content: "\71";
+}
+.fab-icon-arrow-up:before {
+  content: "\72";
+}
+.fab-icon-arrow-down:before {
+  content: "\73";
+}
+.fab-icon-arrow-left:before {
+  content: "\74";
+}
+.fab-icon-arrow-right:before {
+  content: "\75";
+}
+.fab-icon-building-o:before {
+  content: "\76";
+}
+.fab-icon-hospital-o:before {
+  content: "\77";
+}

@@ -1,0 +1,498 @@
+.text-bold-600{
+    font-weight:600 !important;
+}
+/* Sidebar */
+
+.dashboard-sidebar{
+    position: fixed;
+    background: #2A58AD;
+    width: 20%;
+    height: 100vh;
+    left: 0;
+    top:0;
+    z-index: 2;
+}
+
+
+.dashboard-sidebar-inner{
+
+}
+
+.dashboard-sidebar-inner .user-info{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.dashboard-sidebar-inner .user-info img{
+    width: 35%;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+.dashboard-sidebar-inner .user-desc{
+    text-align: center;
+    color: white;
+}
+.dashboard-sidebar-inner .user-desc span{
+    display: block;
+    margin-bottom: 30px;
+    /* opacity: 0.7; */
+    color: #e6e6e6;
+}
+
+
+/* Sidebar menu */
+
+.dashboard-sidebar-menu ul{
+    padding: 0;
+}
+
+.dashboard-sidebar-menu ul li{
+    list-style: none;
+    background: transparent;
+    padding: 30px 20px;
+}
+
+
+.dashboard-sidebar-menu ul li:hover,
+.dashboard-sidebar-menu ul li.dashboard-sidebar-active{
+    background-color: #1C4C9E;
+    border-left:5px solid #2986D1;
+    transition: all 0.3s ease;
+}
+
+.dashboard-sidebar-menu li a i{
+    font-size: 38px;
+    vertical-align: middle;
+    padding-right: 20px;
+}
+
+.dashboard-sidebar-menu li a{
+    color:#88ACEE;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*Navigation Bar*/
+
+.navigation-bar{
+    background: white;
+    padding: 18px;
+    position: relative;
+    overflow-y: inherit;
+}
+
+.navigation-links-wrapper ul{
+    margin: unset;
+}
+
+.navigation-links-wrapper li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navigation-links-wrapper{
+    text-align: left;
+}
+
+.navigation-links{
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.dashboard-inner{
+    padding: 5rem 6rem 5rem 8rem;
+    overflow-y:visible;
+}
+
+
+
+/*Logout*/
+
+.logout-icon a{
+    font-size: 1.2rem;
+    color: #949494 !important;
+    font-weight: 700;
+}
+
+
+
+/* ==========================================================================
+#17 - Our Team Slider
+========================================================================== */
+
+.team {
+    border-radius: 0.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.team:hover .team-caption {
+    padding-top: 2rem;
+    padding-bottom: 4.75rem;
+}
+
+.team:hover .socials {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.text-white [class*="bordered"],
+.team-caption .socials {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.gutter-0 .team {
+    border-radius: 0;
+}
+
+.team-photo {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+}
+
+.team-photo img {
+    max-width: 100%;
+}
+
+.team-caption {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 1.875rem;
+    background: currentColor;
+}
+
+.team-caption>* {
+    display: block;
+}
+
+.team-caption h4 {
+    color: #fff;
+    margin: 0;
+}
+
+.team-caption span {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.team-caption .socials {
+    -webkit-transform: translate(0, calc(100% + 2.5rem));
+    -ms-transform: translate(0, calc(100% + 2.5rem));
+    transform: translate(0, calc(100% + 2.5rem));
+    position: absolute;
+    bottom: 0.875rem;
+}
+
+.team-caption .socials {
+    border-radius: unset;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.team-caption .socials a {
+    padding: 10px;
+    width: unset;
+    opacity: 0.8;
+    margin-right: 5px;
+}
+
+.team-caption .socials a:hover {
+    opacity: 1;
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+.team-caption .socials a svg {
+    font-size: 24px;
+}
+
+.expanded+.team-panel {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    visibility: visible;
+    opacity: 1;
+    padding: 15rem 0 5rem 0;
+}
+
+.expanded+.team-panel>.container {
+    opacity: 1;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.team-panel {
+    -webkit-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    padding: 0;
+    opacity: 0;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.team-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0);
+}
+
+.team-panel>.container {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    opacity: 0;
+}
+
+.team-panel .collapse {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    width: 4.25rem;
+    height: 4.25rem;
+    line-height: 4.25rem;
+    text-align: center;
+    cursor: pointer;
+    color: #000;
+}
+
+.team-panel .collapse::before {
+    font-family: 'icomoon';
+    font-size: 1.875rem;
+    content: "\ecce";
+    color: #fff;
+}
+
+.team-panel .collapse:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.team-grid {
+    -webkit-team-select: none;
+    -moz-team-select: none;
+    -ms-team-select: none;
+    team-select: none;
+    list-style: none;
+    padding: 0;
+}
+
+.team-grid::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.team-grid>li {
+    float: left;
+}
+
+.team-grid .team {
+    overflow: visible;
+}
+
+.team-grid .team-photo {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.team-grid .team-photo:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-box-shadow: 0px 10px 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1199.98px) {
+    .team-grid>li {
+        width: 20%;
+    }
+    .team-grid>li:nth-child(6) {
+        margin-left: calc(20% / 2);
+    }
+}
+
+@media (min-width: 1200px) {
+    .team-grid>li {
+        width: 12.5%;
+    }
+    .team-grid>li:nth-child(9) {
+        margin-left: calc(12.5% / 2);
+    }
+}
+
+.team-list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.team-list>li {
+    position: relative;
+    display: inline-block;
+    width: 3.125rem;
+    border-radius: 50%;
+    z-index: 10;
+    overflow: hidden;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.team-list>li:not(:first-child) {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    margin-left: -1rem;
+}
+
+.team-list>li:hover {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    z-index: 20;
+}
+
+.speakers {
+    margin-right: 1.25rem;
+}
+
+@media (max-width: 1199.98px) {
+    .speakers {
+        display: none;
+    }
+}
+
+
+
+
+
+.band {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+@media (min-width: 30em) {
+    .band {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 60em) {
+    .band {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow:0 2px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
+}
+.card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.card article {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+}
+.card p {
+    flex: 1;
+    line-height: 1.4;
+}
+.card span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 2em 0 0 0;
+}
+.card .thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (min-width: 60em) {
+    .item-1 {
+        grid-column: 1 / span 2;
+    }
+    .item-1 h1 {
+        font-size: 24px;
+    }
+}

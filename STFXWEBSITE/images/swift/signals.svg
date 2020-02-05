@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="477.291" height="277" viewBox="0 0 477.291 277">
+  <g id="signals" transform="translate(-96 -0.5)">
+    <line id="Line_1" data-name="Line 1" y2="277" transform="translate(110.5 0.5)" fill="none" stroke="#18349e" stroke-width="1"/>
+    <line id="Line_8" data-name="Line 8" y1="277" transform="translate(376.033 0.5)" fill="none" stroke="#18349e" stroke-width="1"/>
+    <line id="Line_4" data-name="Line 4" y2="277" transform="translate(243.751 0.5)" fill="none" stroke="#18349e" stroke-width="1"/>
+    <path id="Path_1" data-name="Path 1" d="M0,0" transform="translate(573.291 0.5)" fill="none" stroke="#18349e" stroke-width="1"/>
+    <line id="Line_2" data-name="Line 2" y2="277" transform="translate(171.5 0.5)" fill="none" stroke="#18349e" stroke-width="1"/>
+    <line id="Line_7" data-name="Line 7" y1="277" transform="translate(441.107 0.5)" fill="none" stroke="#18349e" stroke-width="1"/>
+    <line id="Line_3" data-name="Line 3" y2="277" transform="translate(308.825 0.5)" fill="none" stroke="#18349e" stroke-width="1"/>
+    <line id="Line_5" data-name="Line 5" y1="277" transform="translate(512.291 0.5)" fill="none" stroke="#18349e" stroke-width="1"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="26" height="105" transform="translate(96 120)" fill="#18349e"/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="26" height="105" transform="translate(96 120)" fill="#18349e"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" width="26" height="105" transform="translate(361.554 53)" fill="#18349e"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="26" height="105" transform="translate(228.777 120)" fill="#18349e"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="26" height="105" transform="translate(159 68)" fill="#18349e"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" width="26" height="105" transform="translate(429.014 105)" fill="#18349e"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="26" height="105" transform="translate(296.237 68)" fill="#18349e"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="26" height="105" transform="translate(498.791 105)" fill="#18349e"/>
+  </g>
+</svg>

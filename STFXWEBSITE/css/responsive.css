@@ -1,0 +1,480 @@
+@media all and (max-width: 991px) {
+    h1.display-3 {
+        font-size: 3.5rem;
+    }
+    .owl-nav {
+        text-align: center;
+    }
+    .mt-lg-1 {
+        margin-top: 1rem;
+    }
+    .mt-lg-2 {
+        margin-top: 2rem;
+    }
+    .mt-lg-3 {
+        margin-top: 3rem;
+    }
+    .mt-lg-4 {
+        margin-top: 4rem;
+    }
+    .presentation-responsive {
+        display: none;
+    }
+    .navbar-nav {
+        margin: 2rem 1rem 1rem 1rem;
+    }
+    .header-transparent.headroom--top .nav-link {
+        color: black !important;
+        text-shadow:unset;
+    }
+}
+
+@media all and (max-width: 767px) {
+    h1,
+    .h1 {
+        font-size: 2.34375rem;
+    }
+    .text-sm-small {
+        font-size: 14px;
+    }
+    .text-center-sm {
+        text-align: center !important;
+    }
+}
+
+@media all and (max-width: 840px) {
+    h1,
+    .h1,
+    .header-heading {
+        font-size: 2.34375rem;
+    }
+    h1.display-3 {
+        font-size: 2.5rem;
+    }
+    h2,
+    .h2 {
+        font-size: 1.875rem;
+    }
+    h3,
+    .h3 {
+        font-size: 1.5rem;
+    }
+    h4,
+    .h4 {
+        font-size: 1.3125rem;
+    }
+    h5,
+    .h5 {
+        font-size: 1.125rem;
+    }
+    body>section{
+        padding: 4.125rem 0;
+    }
+    body>footer {
+        padding: 3.125rem 0 0 0;
+    }
+    section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    .mt-sm-1 {
+        margin-top: 1rem;
+    }
+    .mt-sm-2 {
+        margin-top: 2rem;
+    }
+    .mt-sm-3 {
+        margin-top: 3rem;
+    }
+    .mt-sm-4 {
+        margin-top: 4rem;
+    }
+    .mb-sm-1 {
+        margin-bottom: 1rem;
+    }
+    .mb-sm-2 {
+        margin-bottom: 2rem;
+    }
+    .mb-sm-3 {
+        margin-bottom: 3rem;
+    }
+    .mt-sm-4 {
+        margin-bottom: 4rem;
+    }
+    .review p {
+        font-size: 1rem;
+    }
+    .review span {
+        font-size: small;
+    }
+    .dropdown-toggle::before {
+        display: none;
+    }
+    /* Logo*/
+    .logo-sm {
+        width: 40%;
+    }
+    .subscribe-text {
+        display: none;
+    }
+    .subscribe-icon {
+        margin-right: unset;
+    }
+    .owl-carousel .owl-item img {
+        display: block;
+        width: 100%;
+    }
+    blockquote {
+        margin: 1rem 0 1rem;
+    }
+    .hide-nav-sm .owl-nav {
+        display: none;
+    }
+    .nav-link {
+        padding: 12px 0;
+    }
+    .gutter-3 .mb-2,
+    .gutter-3 .my-2 {
+        margin-bottom: 0.25rem !important;
+    }
+    .gutter-3 .eyebrow {
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: unset;
+    }
+    footer .im-align-middle {
+        display: block;
+    }
+    footer .list-group-item {
+        font-size: 14px;
+    }
+
+
+    .mf-b{
+        margin-bottom: 1.85714286em;
+    }
+
+    .device-feature-ul{
+        list-style: none;
+        padding:inherit;
+    }
+}
+
+
+
+
+@media all and (max-width: 440px) {
+
+    .device-download-info-table{
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-brand img {
+        width: 130px;
+    }
+    .navbar-brand {
+        margin-right: unset;
+        margin-left: unset;
+    }
+
+    .about-intro p{
+        width: 100% !important;
+    }
+
+    .profit-text .profit-btn{
+        display: block !important;
+    }
+
+    .profit-img img{
+        margin-bottom: 4rem !important;
+        margin-left: unset !important;
+    }
+
+    .next-slick,
+    .prev-slick{
+        display: none !important;
+    }
+
+    .profit-text .price-p{
+        font-size: 3rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .profit-text p{
+        margin-bottom: 2rem!important;
+    }
+
+    .cta{
+        text-align: center !important;
+    }
+    .profit-text .profit-btn .text-center a{
+        margin-bottom: 1rem !important;
+    }
+    .intro-btn-wrapper{
+        text-align: center;
+    }
+
+
+    .navbar-dark .navbar-toggler{
+        background: #1c3ec1;
+        color: white !important;
+        border-radius: 2px;
+        font-size:1rem;
+    }
+
+    .test-wrapper{
+        width: 100%;
+    }
+
+    .header-title{
+        padding-top: unset;
+    }
+
+    .register .features-box{
+        display: none;
+    }
+
+    .navbar-toggler-icon{
+        display: inline-block;
+        width: 1.1em;
+        height: 1.5em;
+    }
+
+    .footer-menu{
+        text-align: unset;
+    }
+
+    .header-btn{
+        margin: 1rem 0 !important;
+    }
+
+    .footer-menu ul{
+        text-align: center;
+        padding: unset;
+        margin: 1rem 0;
+    }
+    .intro-heading {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        color: white;
+        font-weight: 700;
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+
+    .footer-menu li {
+        list-style: none;
+        padding: 0rem 0.5rem;
+        display: inline-block;
+        font-size: small;
+    }
+    .accordion{
+        width: 100%;
+    }
+
+
+    .footer-link-help ul{
+        margin: 1rem 0;
+        padding: unset;
+    }
+
+    .footer-link-help{
+        display: block;
+    }
+    .c-form {
+        width: 100%;
+        margin-left: auto;
+        margin-top: 2rem;
+    }
+
+    .cta-text{
+        margin-bottom: 2rem !important;
+    }
+
+    .price-inner{
+        margin: unset !important;
+    }
+
+    .logo-loader{
+        width: 80% !important;
+    }
+
+    .sign-in-btn{
+        width:50%;
+    }
+
+
+
+    .login-c{
+        display: none;
+    }
+    .login-form-wrapper{
+        padding-left:1.5rem !important;
+        margin: 3rem 0 !important;
+        padding-right: 1.5rem;
+    }
+
+    .pricing-table-wrapper{
+        margin: unset;
+    }
+
+    #loading p{
+        width: 100% !important;
+    }
+    .pricing-table-wrapper{
+        display: block !important;
+    }
+    #premium .pre-title-wrapper h3 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    #free-tele .heading-title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    #free-tele img{
+        margin-top:1rem !important;
+    }
+
+    .offset-1{
+        margin-left: unset !important;
+    }
+
+    #features .p-5 {
+        padding: 2rem !important;
+    }
+
+    #premium p {
+        padding: 1rem 0;
+    }
+
+    .owl-nav{
+        display: none;
+    }
+}
+
+
+
+/* Things hidden on Small Screen */
+@media all and (max-width: 1200px) {
+    .text-white .accordion-group .accordion{
+        padding: 0;
+    }
+    .accordion-control{
+        padding: 30px !important;
+    }
+    .device-accordian-btn{
+        font-size: medium !important;
+    }
+    .accordion-control > *:not(:first-child){
+        margin-top: unset !important;
+    }
+    .accordion-control span{
+        display: block !important;
+    }
+
+    .device-brandname{
+        font-size:21px !important;
+    }
+    .accordion-control .speakers{
+        float: right;
+    }
+    .intro-text{
+        font-size: 15px;
+        line-height: 26px;
+    }
+    .accordion-control h5{
+        padding: 15px 0 !important;
+        min-width: 40%;
+    }
+    .accordion-control > *{
+        display: inline-block !important;
+    }
+
+    .accordion-control{
+        padding: 10px;
+    }
+    .sub-devices{
+        border-top: 1px solid #343a40;
+    }
+}
+@media all and (max-width: 840px) {
+    .about-image-border {
+        display: none;
+    }
+
+    .input-device-search input{
+        width: 100%;
+        margin: auto 0 auto auto;
+        padding: 20px 20px 20px 0;
+    }
+
+    .text-white .accordion-group .accordion{
+        padding: 0;
+    }
+    .accordion-control{
+        padding: 20px 20px 20px 30px !important;
+    }
+    .device-accordian-btn{
+        font-size: small !important;
+    }
+    .accordion-control > *:not(:first-child){
+        margin-top: unset !important;
+    }
+    .accordion-control span{
+        display: block !important;
+    }
+
+    .device-brandname{
+        font-size:18px !important;
+    }
+
+    .accordion-control .speakers{
+        float: right;
+    }
+    .intro-text{
+        font-size: 15px;
+        line-height: 26px;
+    }
+    .accordion-control h5{
+        padding: 15px 0 !important;
+        min-width: 40%;
+    }
+    .accordion-control > *{
+        display: inline-block !important;
+    }
+
+    .accordion-control{
+        padding: 10px;
+    }
+
+    .text-center-mob-copy{
+        padding-top: 20px;
+        text-align: center !important;
+    }
+
+    .move-to-top{
+        left: 44%;
+    }
+}
+
+
+@media screen and (min-device-width: 701px) and (max-device-width: 848px) {
+    .team-caption {
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 767px){
+    .device-download{
+        float: unset !important;
+    }
+    .device-download a{
+        padding: .5rem 1rem;
+    }
+}

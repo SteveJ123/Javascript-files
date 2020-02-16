@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="fieldset" data-credit-card-fields="" data-slate="" dir="ltr">
+    
+
+        <input value="false" size="30" type="hidden" name="checkout[credit_card][vault]" id="checkout_credit_card_vault">
+  
+        <div class="field field--required">
+  
+          
+  
+          <div class="field__input-wrapper field__input-wrapper--icon-right"><label class="field__label field__label--visible" for="checkout_credit_card_number">Card number</label>
+            <div class="field__input field__input--iframe-container" data-card-fields="number" data-card-field-placeholder="Card number" data-card-field-prefix="Field container for:"><iframe class="card-fields-iframe" frameborder="0" id="card-fields-number-qw72ypstonm00000" name="card-fields-number-qw72ypstonm00000" scrolling="no" src="https://checkout.us.shopifycs.com/number?identifier=186ef5ed60558fa27793bb2aea9afac5&amp;location=https%3A%2F%2Fkith.com%2F942252%2Fcheckouts%2F186ef5ed60558fa27793bb2aea9afac5%3Fprevious_step%3Dshipping_method%26step%3Dpayment_method&amp;dir=ltr&amp;fonts[]=Roboto" title="Field container for: Card number" style="height: 43px;"></iframe></div>
+            <div id="credit_card_number_tooltip" class="field__icon"><div class="field__icon-svg"><svg class="icon-svg icon-svg--color-adaptive-lighter icon-svg--size-16 icon-svg--block" aria-hidden="true" focusable="false"> <use xlink:href="#lock"></use> </svg></div></div>
+          </div>
+  </div>
+        <div data-credit-card-name="true" class="field field--required">
+  
+          
+  
+          <div class="field__input-wrapper"><label class="field__label field__label--visible" for="checkout_credit_card_name">Name on card</label>
+            <div class="field__input field__input--iframe-container" data-card-fields="name" data-card-field-placeholder="Name on card" data-card-field-prefix="Field container for:"><iframe class="card-fields-iframe" frameborder="0" id="card-fields-name-mm8ixu98y0000000" name="card-fields-name-mm8ixu98y0000000" scrolling="no" src="https://checkout.us.shopifycs.com/name?identifier=186ef5ed60558fa27793bb2aea9afac5&amp;location=https%3A%2F%2Fkith.com%2F942252%2Fcheckouts%2F186ef5ed60558fa27793bb2aea9afac5%3Fprevious_step%3Dshipping_method%26step%3Dpayment_method&amp;dir=ltr&amp;fonts[]=Roboto" title="Field container for: Name on card" style="height: 43px;"></iframe></div>
+          </div>
+  </div>
+  
+        <div class="field--half field field--required" data-credit-card-expiry="true">
+  
+          
+  
+          <div class="field__input-wrapper"><label class="field__label field__label--visible" for="checkout_credit_card_expiry">Expiration date (MM / YY)</label>
+            <div class="field__input field__input--iframe-container" data-card-fields="expiry" data-card-field-placeholder="Expiration date (MM / YY)" data-card-field-prefix="Field container for:" data-card-field-tooltip="Card expiration date in format: month, month, year, year"><iframe class="card-fields-iframe" frameborder="0" id="card-fields-expiry-rxpj1k5t5gi00000" name="card-fields-expiry-rxpj1k5t5gi00000" scrolling="no" src="https://checkout.us.shopifycs.com/expiry?identifier=186ef5ed60558fa27793bb2aea9afac5&amp;location=https%3A%2F%2Fkith.com%2F942252%2Fcheckouts%2F186ef5ed60558fa27793bb2aea9afac5%3Fprevious_step%3Dshipping_method%26step%3Dpayment_method&amp;dir=ltr&amp;fonts[]=Roboto" title="Field container for: Expiration date (MM / YY)" style="height: 43px;"></iframe></div>
+          </div>
+  </div>
+        <div class="field--half field field--required">
+  
+          
+  
+          <div class="field__input-wrapper field__input-wrapper--icon-right"><label class="field__label field__label--visible" for="checkout_credit_card_verification_value">Security code</label>
+            <div class="field__input field__input--iframe-container" data-card-fields="verification_value" data-card-field-placeholder="Security code" data-card-field-prefix="Field container for:" data-card-field-tooltip="3-digit security code usually found on the back of your card. American Express cards have a 4-digit code located on the front."><iframe class="card-fields-iframe" frameborder="0" id="card-fields-verification_value-ha41zcr6iy000000" name="card-fields-verification_value-ha41zcr6iy000000" scrolling="no" src="https://checkout.us.shopifycs.com/verification_value?identifier=186ef5ed60558fa27793bb2aea9afac5&amp;location=https%3A%2F%2Fkith.com%2F942252%2Fcheckouts%2F186ef5ed60558fa27793bb2aea9afac5%3Fprevious_step%3Dshipping_method%26step%3Dpayment_method&amp;dir=ltr&amp;fonts[]=Roboto" title="Field container for: Security code" style="height: 43px;"></iframe></div>
+  
+            <div id="credit_card_verification_value_tooltip" role="tooltip" class="field__icon has-tooltip">
+              <span id="tooltip-for-verification_value" class="tooltip">
+                <span data-cvv-tooltip="unknown">
+                  3-digit security code usually found on the back of your card. American Express cards have a 4-digit code located on the front.
+                </span>
+                <span data-cvv-tooltip="amex" class="hidden">
+                  4-digit security code on the front of your card
+                </span>
+                <span data-cvv-tooltip="other" class="hidden">
+                  3-digit security code on the back of your card
+                </span>
+              </span>
+  <div class="field__icon-svg"><svg class="icon-svg icon-svg--color-adaptive-lighter icon-svg--size-16 icon-svg--block" aria-hidden="true" focusable="false"> <use xlink:href="#question"></use> </svg></div></div>        </div>
+  </div>
+</div>
+
+<script>
+
+var test = document.getElementById('card-fields-number-qw72ypstonm00000');
+var iframewindow = test.contentWindow;
+console.log(iframewindow);
+</script>
+
+</body>
+</html>

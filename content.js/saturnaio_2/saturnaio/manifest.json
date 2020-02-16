@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "SaturnAIO",
+  "version": "1.0",
+  "icons": { 
+    "16":"images/16.png",
+    "48": "images/48.png",
+    "128": "images/icon.png"  
+},
+  "permissions": [
+    "notifications",
+    "unlimitedStorage",
+    "tabs",
+    "idle",
+    "management",
+    "webNavigation",
+    "webRequestBlocking",
+    "storage",
+    "contextMenus",
+    "chrome://favicon/",
+    "clipboardWrite",
+    "<all_urls>",
+    "http://*/*", 
+    "https://*/*"
+  ],
+  "browser_action":{
+    "default_popup":"popup.html",
+    "default_title":"SaturnAIO",
+    "default_icon": {
+      "128": "images/icon.png"
+    }
+  },
+
+  "content_scripts":[
+    {
+      "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+      "matches":[
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.wrapper{
+    position: relative;
+    height: 345px;
+    width: 225px;
+
+}
+
+.icon{
+    height:100px;
+    width:100px;
+    left:60px;
+    top:-3px;
+    position: relative;
+}
+
+.input{
+    box-sizing: content-box; 
+    width:175px;
+    height:15px;
+    top: -10px;
+    left:15px;
+    margin:0 0 5px 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 2px 10px;
+    border-color: rgba(0, 0, 0, 0.623);
+    position: relative;
+}
+
+.credit-card{
+    top: 20px;
+}
+
+input::placeholder {
+    font-size: 7pt;
+    color: rgb(49, 83, 128);
+
+}
+
+body{
+    background: url('images/bgcolor.png') no-repeat top center;
+    background-size: cover;
+
+}
+
+.savebutton{
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    top:0px;
+    left:75px;
+    width:75px;
+    height:18px;
+    position: relative;
+}
+.savebutton:hover {
+    background-color: rgba(71, 66, 88, 0.685); /* Green */
+    color: rgb(255, 255, 255);
+}
+
+
+.version{
+    color: rgba(106, 125, 187, 0.685);
+    top:8px;
+    font-size: 4.5pt;
+    left:187px;
+    position: relative;
+  
+}
+
+
+.topnav {
+    background-color: rgba(150, 135, 207, 0.418);
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 3px 20px;
+    text-decoration: none;
+    font-size: 10px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: rgba(71, 66, 88, 0.685);
+    color: white;
+  }
+.onoffswitch {
+    top:80px;
+    left:175px;
+    position: relative; width: 35px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 50px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 15px; padding: 0; line-height: 15px;
+    font-size: 5px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 3px;
+    background-color: #4CDE81; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 3px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 15px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 16px;
+    border: 2px solid #999999; border-radius: 50px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}

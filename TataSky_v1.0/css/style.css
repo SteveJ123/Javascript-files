@@ -350,6 +350,10 @@ body{
     float: left;
 }
 
+ul li{
+	color:white;
+}
+
 
 
 /***** Media Quries *****/

@@ -1,0 +1,45 @@
+@font-face{
+    font-family: "aliseo";
+    src:url("font/ALISEO-NonCommercial.otf");
+}
+
+body{
+    background-image: url(TEST.png);        
+    background-repeat: repeat;
+    font-family: "aliseo" !important;
+}
+
+.header{
+    text-align: center;
+}
+
+
+.sponser-box{
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+}
+
+.partners{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sponser-name{
+    /* padding: 20px; */
+}
+
+.click-button{
+    display:inline-block;
+    /* width: 100%; */
+    /* height: 400px;
+    display:flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.btn.btn-primary.btn-large{
+    width: 200px;
+    height:100px;
+}
+
